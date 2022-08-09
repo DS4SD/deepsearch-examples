@@ -1,0 +1,73 @@
+
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+extend-exclude = """
+# Exclude generated API code
+^/deepsearch/cps/apis/.+$
+"""
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip_glob = ["docs", "deepsearch/cps/apis"]
+py_version=38
+known_first_party = ["cps"]
+
+[tool.mypy]
+pretty = true
+# strict = true
+no_implicit_optional = true
+python_version = 3.8
+
+# We are not going to bother about generated code...
+[[tool.mypy.overrides]]
+module = "deepsearch.cps.apis.*"
+ignore_errors = true
+# https://stackoverflow.com/a/60744115
+implicit_reexport = true
+
+# Silence errors for third-party packages that don't have
+# typings available.
+[[tool.mypy.overrides]]
+module = "jose.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "IPython.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "ipywidgets.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "ipython_blocking.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "rdkit.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "numpy.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pandas.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "mhfp.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "appdirs.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pluggy.*"
+ignore_missing_imports = true
+
