@@ -1,0 +1,11 @@
+deepsearch-toolkit>=0.3.2
+
+# Run notebooks
+jupyter~=1.0.0
+ipywidgets~=7.7.1
+
+# Visualize page
+numpy~=1.23.1
+matplotlib~=3.5.2
+
+# For figures extraction
