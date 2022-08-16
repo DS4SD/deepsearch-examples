@@ -1,6 +1,6 @@
 # Document conversion examples
 
-## TL;DR
+## TL;DR Simply convert a document
 
 ```shell
 pip install deepsearch-toolkit
