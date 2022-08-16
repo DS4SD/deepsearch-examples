@@ -9,3 +9,5 @@ numpy~=1.23.1
 matplotlib~=3.5.2
 
 # For figures extraction
+Pillow~=9.2.0
+

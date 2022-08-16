@@ -5,6 +5,8 @@ cps_client.json
 
 results_*/
 converted_docs
+*converted_docs/
+
 
 # Created by https://www.gitignore.io/api/linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
 # Edit at https://www.gitignore.io/?templates=linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
