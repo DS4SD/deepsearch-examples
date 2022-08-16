@@ -1,5 +1,5 @@
 # Copyright IBM Inc. All rights reserved.
-# 
+#
 # SPDX-License-Identifier: MIT
 #
 
@@ -39,7 +39,9 @@ import typer
 import deepsearch as ds
 
 
-def crop_pdf_to_image(pdf_filename: Path, page: int, bbox: List[int], output_filename: Path, resolution=72):
+def crop_pdf_to_image(
+    pdf_filename: Path, page: int, bbox: List[int], output_filename: Path, resolution=72
+):
     """
     Invoke the pdftoppm executable for cropping the given bounding box from the PDF doucment
 
@@ -60,13 +62,21 @@ def crop_pdf_to_image(pdf_filename: Path, page: int, bbox: List[int], output_fil
         "pdftoppm",
         "-png",
         "-singlefile",
-        "-f", str(page), "-l", str(page),
+        "-f",
+        str(page),
+        "-l",
+        str(page),
         "-cropbox",
-        "-r", str(resolution),
-        "-x", str(bbox[0]),
-        "-y", str(bbox[1]),
-        "-W", str(bbox[2]-bbox[0]),
-        "-H", str(bbox[3]-bbox[1]),
+        "-r",
+        str(resolution),
+        "-x",
+        str(bbox[0]),
+        "-y",
+        str(bbox[1]),
+        "-W",
+        str(bbox[2] - bbox[0]),
+        "-H",
+        str(bbox[3] - bbox[1]),
         str(pdf_filename),
         str(output_filename),
     ]
@@ -78,7 +88,9 @@ def crop_pdf_to_image(pdf_filename: Path, page: int, bbox: List[int], output_fil
         ) from cpe
 
 
-def extract_figures_from_json_doc(pdf_filename: Path, document: dict, output_dir: Path, resolution: int):
+def extract_figures_from_json_doc(
+    pdf_filename: Path, document: dict, output_dir: Path, resolution: int
+):
     """
     Iterate through the converted document format and extract the figures as PNG files
 
@@ -95,8 +107,10 @@ def extract_figures_from_json_doc(pdf_filename: Path, document: dict, output_dir
     resolution : int
         Resolution of the extracted image.
     """
-    
-    output_base = output_dir / document["file-info"]["filename"].rstrip(".pdf").rstrip(".PDF")
+
+    output_base = output_dir / document["file-info"]["filename"].rstrip(".pdf").rstrip(
+        ".PDF"
+    )
     page_counters = {}
     # Iterate through all the figures identified in the converted document
     for figure in document.get("figures", []):
@@ -106,11 +120,16 @@ def extract_figures_from_json_doc(pdf_filename: Path, document: dict, output_dir
         page_counters[page] += 1
 
         # Retrieve the page dimensions, needed for shifting the coordinates of the bounding boxes
-        page_dims = next((dims for dims in document["page-dimensions"] if dims["page"] == page), None)
+        page_dims = next(
+            (dims for dims in document["page-dimensions"] if dims["page"] == page), None
+        )
         if page_dims is None:
-            typer.secho(f"Page dimensions for page {page} not defined! Skipping it.", fg=typer.colors.YELLOW)
+            typer.secho(
+                f"Page dimensions for page {page} not defined! Skipping it.",
+                fg=typer.colors.YELLOW,
+            )
             continue
-        
+
         # Convert the Deep Search bounding box in the coordinate frame used to extract images.
         # From having the origin in the bottom-left corner, to the top-left corner
         # The bounding box is expanded to the closest integer coordinates, because of the format
@@ -123,18 +142,32 @@ def extract_figures_from_json_doc(pdf_filename: Path, document: dict, output_dir
         ]
 
         # Extract the bounding box
-        output_filename = output_base.with_name(f"{output_base.name}_{page}_{page_counters[page]}")
-        crop_pdf_to_image(pdf_filename, page, bbox, output_filename, resolution=resolution)
+        output_filename = output_base.with_name(
+            f"{output_base.name}_{page}_{page_counters[page]}"
+        )
+        crop_pdf_to_image(
+            pdf_filename, page, bbox, output_filename, resolution=resolution
+        )
         typer.secho(f"Figure extracted in {output_filename}.png", fg=typer.colors.GREEN)
 
 
 def main(
-    pdf_filename: Path=typer.Option(..., "-i", help="Input PDF filename"),
-    output_dir: Path=typer.Option(..., "-o", help="Output directory where figures are saved"),
-    proj_key: str=typer.Option("1234567890abcdefghijklmnopqrstvwyz123456", "-p", help="Deep Search project key"),
-    resolution: int=typer.Option(72, "-r", help="Resolution for the extracted figures"),
-    config_file: Path=typer.Option("ds-auth.json", "-c", help="Path to the Deep Search config file. Can be generated with `deepsearch login --output PATH`")
-    ):
+    pdf_filename: Path = typer.Option(..., "-i", help="Input PDF filename"),
+    output_dir: Path = typer.Option(
+        ..., "-o", help="Output directory where figures are saved"
+    ),
+    proj_key: str = typer.Option(
+        "1234567890abcdefghijklmnopqrstvwyz123456", "-p", help="Deep Search project key"
+    ),
+    resolution: int = typer.Option(
+        72, "-r", help="Resolution for the extracted figures"
+    ),
+    config_file: Path = typer.Option(
+        "ds-auth.json",
+        "-c",
+        help="Path to the Deep Search config file. Can be generated with `deepsearch login --output PATH`",
+    ),
+):
 
     typer.secho(f"Using Deep Search config {config_file}", fg=typer.colors.BLUE)
 
@@ -145,10 +178,7 @@ def main(
 
     # Launch the docucment conversion and download the results
     documents = ds.convert_documents(
-        api=api, 
-        proj_key=proj_key,
-        source_path=pdf_filename,
-        progress_bar=True
+        api=api, proj_key=proj_key, source_path=pdf_filename, progress_bar=True
     )
     documents.download_all(result_dir=output_dir, progress_bar=True)
 
@@ -157,10 +187,15 @@ def main(
         with ZipFile(output_file) as archive:
             all_files = archive.namelist()
             for name in all_files:
-                if name.endswith('.json'):
-                    typer.secho(f"Procecssing file {name} in archive {output_file}", fg=typer.colors.BLUE)
+                if name.endswith(".json"):
+                    typer.secho(
+                        f"Procecssing file {name} in archive {output_file}",
+                        fg=typer.colors.BLUE,
+                    )
                     document = json.loads(archive.read(name))
-                    extract_figures_from_json_doc(pdf_filename, document, output_dir, resolution)
+                    extract_figures_from_json_doc(
+                        pdf_filename, document, output_dir, resolution
+                    )
 
 
 if __name__ == "__main__":
