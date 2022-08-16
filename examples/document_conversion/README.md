@@ -39,8 +39,8 @@ print(info)
 {
     "host": "https://deepsearch-experience.res.ibm.com",
     "auth": {
-    "username": "FILL ME",
-    "api_key": "FILL ME"
+        "username": "FILL ME",
+        "api_key": "FILL ME"
     },
     "verify_ssl": true
 }
