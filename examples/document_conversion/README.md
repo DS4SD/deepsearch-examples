@@ -35,6 +35,9 @@ print(info)
 > To obtain your credentials, please refer to the documentation page https://ds4sd.github.io/deepsearch-toolkit/getting_started/#authentication.
 > The file can also be generated via `deepsearch login --output ds-auth.json`
 
+<details>
+  <summary>See example</summary>
+
 ```json
 {
     "host": "https://deepsearch-experience.res.ibm.com",
@@ -46,8 +49,10 @@ print(info)
 }
 ```
 
+</details>
+
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [convert_documents.ipynb](notebooks/convert_documents.ipynb) | Full example on programmatic document conversion |
-| 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements |
-| 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures |
+| 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements <br /> ![](.readme_resources/visualize_bbox.png) |
+| 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures <br /> ![](.readme_resources/extract_figures.png) |
