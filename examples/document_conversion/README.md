@@ -54,5 +54,5 @@ print(info)
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [convert_documents.ipynb](notebooks/convert_documents.ipynb) | Full example on programmatic document conversion |
-| 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements <br /> ![](.readme_resources/visualize_bbox.png) |
-| 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures <br /> ![](.readme_resources/extract_figures.png) |
+| 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements <br /> <img src="./.readme_resources/visualize_bbox.png" width="300px" /> |
+| 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures <br /> <img src=".readme_resources/extract_figures.png" width="300px" /> |
