@@ -56,3 +56,15 @@ print(info)
 | 1. | [convert_documents.ipynb](notebooks/convert_documents.ipynb) | Full example on programmatic document conversion |
 | 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements <br /> <img src="./.readme_resources/visualize_bbox.png" width="300px" /> |
 | 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures <br /> <img src=".readme_resources/extract_figures.png" width="300px" /> |
+
+
+### Additional dependencies
+
+Some visualization in the examples are converting a PDF document with Deep Search and exports the figures into PNG files.
+
+The PDF to image conversion relies on the `pdftoppm` executable of the Poppler library (GPL license)
+https://poppler.freedesktop.org/
+The Poppler library can be installed from the most common packaging systems, for example
+- On macOS, `brew install poppler`
+- On Debian (and Ubuntu), `apt-get install poppler-utils`
+- On RHEL, `yum install poppler-utils`
