@@ -56,7 +56,7 @@ print(info)
 | 1. | [convert_documents.ipynb](notebooks/convert_documents.ipynb) | Full example on programmatic document conversion |
 | 2. | [visualize_bbox.ipynb](notebooks/visualize_bbox.ipynb) | Visualize the bbox of the text elements <br /> <img src="./.readme_resources/visualize_bbox.png" width="300px" /> |
 | 3. | [extract_figures.py](scripts/extract_figures.py) | Given a PDF file, extract the figures <br /> <img src=".readme_resources/extract_figures.png" width="300px" /> |
-| 4. | [extract_tables.py](scripts/extract_tables.py) [script version] <br /> [extract_tables.ipynb](scripts/extract_tables.ipynb) [notebook version] | Given a PDF file, extract the tables <br /> <img src=".readme_resources/extract_tables.png" width="300px" /> |
+| 4. | [extract_tables.py](scripts/extract_tables.py) [script version] <br /> [extract_tables.ipynb](notebooks/extract_tables.ipynb) [notebook version] | Given a PDF file, extract the tables <br /> <img src=".readme_resources/extract_tables.png" width="300px" /> |
 
 
 ### Additional dependencies
