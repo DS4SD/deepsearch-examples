@@ -14,7 +14,7 @@ The Poppler library can be installed from the most common packaging systems, for
 - On RHEL, `yum install poppler-utils`
 
 
-$ python scripts/extract_figures.py --help
+$ python extract_figures.py --help
 Usage: extract_figures.py [OPTIONS]
 
 Options:
@@ -24,8 +24,12 @@ Options:
               1234567890abcdefghijklmnopqrstvwyz123456]
   -r INTEGER  Resolution for the extracted figures  [default: 72]
   -c PATH     Path to the Deep Search config file. Can be generated with
-              `deepsearch login --output PATH`  [default: ds-auth.json]
+              `deepsearch login --output PATH`  [default: ../../ds-auth.json]
   --help      Show this message and exit.
+
+
+For example, run as
+$ python extract_figures.py -i ../../data/samples/2206.01062.pdf -o results_figures/
 """
 
 import json
@@ -163,7 +167,7 @@ def main(
         72, "-r", help="Resolution for the extracted figures"
     ),
     config_file: Path = typer.Option(
-        "ds-auth.json",
+        "../../ds-auth.json",
         "-c",
         help="Path to the Deep Search config file. Can be generated with `deepsearch login --output PATH`",
     ),

@@ -6,7 +6,7 @@
 """
 This script is converting a PDF document with Deep Search and exports the tables in CSV files.
 
-$ python scripts/extract_tables.py --help
+$ python extract_tables.py --help
 Usage: extract_tables.py [OPTIONS]
 
 Options:
@@ -15,12 +15,12 @@ Options:
   -p TEXT  Deep Search project key  [default:
            1234567890abcdefghijklmnopqrstvwyz123456]
   -c PATH  Path to the Deep Search config file. Can be generated with
-           `deepsearch login --output PATH`  [default: ds-auth.json]
+           `deepsearch login --output PATH`  [default: ../../ds-auth.json]
   --help   Show this message and exit.
 
 
 For example, run as
-$ python scripts/extract_tables.py -i data/samples/2206.00785.pdf -o results_tables/
+$ python extract_tables.py -i ../../data/samples/2206.00785.pdf -o results_tables/
 """
 
 import json
@@ -79,7 +79,7 @@ def main(
         "1234567890abcdefghijklmnopqrstvwyz123456", "-p", help="Deep Search project key"
     ),
     config_file: Path = typer.Option(
-        "ds-auth.json",
+        "../../ds-auth.json",
         "-c",
         help="Path to the Deep Search config file. Can be generated with `deepsearch login --output PATH`",
     ),
