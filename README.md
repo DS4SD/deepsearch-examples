@@ -20,25 +20,9 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 ## Examples
 
-> Examples rely on having valid credentials in the file `ds-auth.json`.
+> Examples rely on having valid credentials in the file `ds-auth.json` (see example content in [./ds-auth.json.example](./ds-auth.json.example)).
 > To obtain your credentials, please refer to the documentation page https://ds4sd.github.io/deepsearch-toolkit/getting_started/#authentication.
 > The file can also be generated via `deepsearch login --output ds-auth.json`
-
-<details>
-  <summary>See example</summary>
-
-```json
-{
-    "host": "https://deepsearch-experience.res.ibm.com",
-    "auth": {
-        "username": "FILL ME",
-        "api_key": "FILL ME"
-    },
-    "verify_ssl": true
-}
-```
-
-</details>
 
 
 ### Document conversion
