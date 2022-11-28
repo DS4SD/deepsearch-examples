@@ -29,7 +29,7 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [Convert documents quick start](./examples/document_conversion_quick_start/) | Full example on programmatic document conversion |
+| 1. | [Convert documents quick start](./examples/document_conversion_quick_start/) | Full example on programmatic document conversion <br /> <img src=".readme_resources/doc_conversion_quick_start.png" width="300px" /> |
 | 2. | [Visualize bounding boxes](./examples/document_conversion_visualize_bbox/) | Visualize the bbox of the text elements <br /> <img src="./.readme_resources/visualize_bbox.png" width="300px" /> |
 | 3. | [Extract figures from documents](./examples/document_conversion_extract_figures/) | Given a PDF file, extract the figures <br /> <img src=".readme_resources/extract_figures.png" width="300px" /> |
 | 4. | [Extract tables](./examples/document_conversion_extract_tables/) | Given a PDF file, extract the tables <br /> <img src=".readme_resources/extract_tables.png" width="300px" /> |
