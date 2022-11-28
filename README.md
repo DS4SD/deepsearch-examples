@@ -55,6 +55,10 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 This section will showcase examples which query data processed via Deep Search.
 
+|    | Name              | Description |
+| -- | ----------------- | ----------- |
+| 1. | [Data query quick start](./examples/data_query_quick_start/) | Example listing data collections, making search in one and more document collections, using source for projection |
+
 
 ### Bring your own
 

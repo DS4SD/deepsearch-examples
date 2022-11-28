@@ -1,5 +1,6 @@
 
 ds-auth.json
+ds-auth.*.json
 cps-auth.json
 cps_client.json
 
