@@ -1,15 +1,19 @@
 
 ds-auth.json
+ds-auth.*.json
 cps-auth.json
 cps_client.json
 
 results_*/
 converted_docs
 *converted_docs/
-
+quick_start_results.*
 
 # Created by https://www.gitignore.io/api/linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
 # Edit at https://www.gitignore.io/?templates=linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
+
+### MS Office ###
+~$*
 
 ### Linux ###
 *~
