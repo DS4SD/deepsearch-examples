@@ -9,7 +9,7 @@
 
 
 In this repository we showcase some common usage of Deep Search
-for **Document conversion** as well as **Data and Knowledge exploration**. 
+for **Document conversion** as well as **Data and Knowledge exploration**.
 
 
 ## Quick links
@@ -29,10 +29,10 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [Convert documents quick start](./examples/document_conversion_quick_start/) | Full example on programmatic document conversion <br /> <img src=".readme_resources/doc_conversion_quick_start.png" width="300px" /> |
-| 2. | [Visualize bounding boxes](./examples/document_conversion_visualize_bbox/) | Visualize the bbox of the text elements <br /> <img src="./.readme_resources/visualize_bbox.png" width="300px" /> |
-| 3. | [Extract figures from documents](./examples/document_conversion_extract_figures/) | Given a PDF file, extract the figures <br /> <img src=".readme_resources/extract_figures.png" width="300px" /> |
-| 4. | [Extract tables](./examples/document_conversion_extract_tables/) | Given a PDF file, extract the tables <br /> <img src=".readme_resources/extract_tables.png" width="300px" /> |
+| 1. | [Convert documents quick start][doc_conv_quick_start] | Full example on programmatic document conversion <br /> [<img src=".readme_resources/doc_conversion_quick_start.png" width="300px" />][doc_conv_quick_start] |
+| 2. | [Visualize bounding boxes][doc_conv_visualize_bbox] | Visualize the bbox of the text elements <br /> [<img src="./.readme_resources/visualize_bbox.png" width="300px" />][doc_conv_visualize_bbox] |
+| 3. | [Extract figures from documents][doc_conv_extract_figures] | Given a PDF file, extract the figures <br /> [<img src=".readme_resources/extract_figures.png" width="300px" />][doc_conv_extract_figures] |
+| 4. | [Extract tables][doc_conv_extract_tables] | Given a PDF file, extract the tables <br /> [<img src=".readme_resources/extract_tables.png" width="300px" />][doc_conv_extract_tables] |
 
 
 ### Data queries
@@ -41,8 +41,8 @@ This section will showcase examples which query data processed via Deep Search.
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [Data query quick start](./examples/data_query_quick_start/) | Example listing data collections, making search in one and more document collections, using source for projection <br /> <img src=".readme_resources/data_query_quick_start.png" width="300px" /> |
-| 2. | [Chemistry search queries](./examples/data_query_chemistry/) | Search the chemistry databases for known molecules <br /> <img src=".readme_resources/data_query_chemistry.png" width="300px" /> |
+| 1. | [Data query quick start][data_query_quick_start] | Example listing data collections, making search in one and more document collections, using source for projection <br /> [<img src=".readme_resources/data_query_quick_start.png" width="300px" />][data_query_quick_start] |
+| 2. | [Chemistry search queries][data_query_chemistry] | Search the chemistry databases for known molecules <br /> [<img src=".readme_resources/data_query_chemistry.png" width="300px" />][data_query_chemistry] |
 
 
 ### Bring your own
@@ -76,3 +76,10 @@ xargs sudo apt-get install < apt.txt
 
 The `Deep Search Toolkit` codebase is under MIT license.
 For individual model usage, please refer to the model licenses found in the original packages.
+
+[doc_conv_quick_start]: ./examples/document_conversion_quick_start/
+[doc_conv_visualize_bbox]: ./examples/document_conversion_visualize_bbox/
+[doc_conv_extract_figures]: ./examples/document_conversion_extract_figures/
+[doc_conv_extract_tables]: ./examples/document_conversion_extract_tables/
+[data_query_quick_start]: ./examples/data_query_quick_start/
+[data_query_chemistry]: ./examples/data_query_chemistry/
