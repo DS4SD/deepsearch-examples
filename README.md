@@ -42,7 +42,7 @@ This section will showcase examples which query data processed via Deep Search.
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [Data query quick start](./examples/data_query_quick_start/) | Example listing data collections, making search in one and more document collections, using source for projection <br /> <img src=".readme_resources/data_query_quick_start.png" width="300px" /> |
-| 2. | [Chemistry search queries](./examples/data_query_chemistry/) | Search the chemistry databases for known molecules <br /> <img src=".readme_resources/data_query_quick_start.png" width="300px" /> |
+| 2. | [Chemistry search queries](./examples/data_query_chemistry/) | Search the chemistry databases for known molecules <br /> <img src=".readme_resources/data_query_chemistry.png" width="300px" /> |
 
 
 ### Bring your own
