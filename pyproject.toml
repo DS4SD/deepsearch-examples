@@ -9,7 +9,7 @@ packages = []
 
 [tool.poetry.dependencies]
 python = "^3.8"
-deepsearch-toolkit = "^0.3.4"
+deepsearch-toolkit = "^0"
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
@@ -98,4 +98,3 @@ ignore_missing_imports = true
 [[tool.mypy.overrides]]
 module = "pluggy.*"
 ignore_missing_imports = true
-
