@@ -49,6 +49,11 @@ This section will showcase examples which query data processed via Deep Search.
 
 This section will showcase examples for bringing your own documents, csv data, nlp models and more.
 
+|    | Name              | Description |
+| -- | ----------------- | ----------- |
+| 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents and search on them <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
+| 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
+
 
 
 ## Example dependencies
@@ -83,3 +88,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [doc_conv_extract_tables]: ./examples/document_conversion_extract_tables/
 [data_query_quick_start]: ./examples/data_query_quick_start/
 [data_query_chemistry]: ./examples/data_query_chemistry/
+[bring_your_own_pdf]: ./examples/bring_your_own_pdf/
