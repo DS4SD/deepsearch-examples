@@ -21,6 +21,7 @@ numerize = "^0.12"
 openpyxl = "^3.0.10"
 rdkit-pypi = "^2022.9.2"
 mols2grid = "^1.0.0"
+python-slugify = "^8.0.1"
 
 
 [build-system]
