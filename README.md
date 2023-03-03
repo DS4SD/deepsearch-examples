@@ -55,6 +55,14 @@ This section will showcase examples for bringing your own documents, csv data, n
 | 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
 
 
+### Attachments and metadata
+
+This section will showcase examples for managing index item attachments and metadata.
+
+|    | Name              | Description |
+| -- | ----------------- | ----------- |
+| 1. | [Manage attachments][manage_attachments] | Manage index item attachments <br /> [<img src=".readme_resources/manage_attachments.png" width="300px" />][manage_attachments] |
+
 
 ## Example dependencies
 
@@ -89,3 +97,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_query_quick_start]: ./examples/data_query_quick_start/
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
+[manage_attachments]: ./examples/attachment_management/
