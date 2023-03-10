@@ -30,9 +30,10 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [Convert documents quick start][doc_conv_quick_start] | Full example on programmatic document conversion <br /> [<img src=".readme_resources/doc_conversion_quick_start.png" width="300px" />][doc_conv_quick_start] |
-| 2. | [Visualize bounding boxes][doc_conv_visualize_bbox] | Visualize the bbox of the text elements <br /> [<img src="./.readme_resources/visualize_bbox.png" width="300px" />][doc_conv_visualize_bbox] |
-| 3. | [Extract figures from documents][doc_conv_extract_figures] | Given a PDF file, extract the figures <br /> [<img src=".readme_resources/extract_figures.png" width="300px" />][doc_conv_extract_figures] |
-| 4. | [Extract tables][doc_conv_extract_tables] | Given a PDF file, extract the tables <br /> [<img src=".readme_resources/extract_tables.png" width="300px" />][doc_conv_extract_tables] |
+| 2. | [Convert documents with custom settings][doc_conv_custom_pipeline] | Full example on programmatic document conversion with custom conversion settings <br /> [<img src=".readme_resources/doc_conversion_quick_start.png" width="300px" />][doc_conv_custom_pipeline] |
+| 3. | [Visualize bounding boxes][doc_conv_visualize_bbox] | Visualize the bbox of the text elements <br /> [<img src="./.readme_resources/visualize_bbox.png" width="300px" />][doc_conv_visualize_bbox] |
+| 4. | [Extract figures from documents][doc_conv_extract_figures] | Given a PDF file, extract the figures <br /> [<img src=".readme_resources/extract_figures.png" width="300px" />][doc_conv_extract_figures] |
+| 5. | [Extract tables][doc_conv_extract_tables] | Given a PDF file, extract the tables <br /> [<img src=".readme_resources/extract_tables.png" width="300px" />][doc_conv_extract_tables] |
 
 
 ### Data queries
@@ -91,6 +92,7 @@ The `Deep Search Toolkit` codebase is under MIT license.
 For individual model usage, please refer to the model licenses found in the original packages.
 
 [doc_conv_quick_start]: ./examples/document_conversion_quick_start/
+[doc_conv_custom_pipeline]: ./examples/document_conversion_custom_settings/
 [doc_conv_visualize_bbox]: ./examples/document_conversion_visualize_bbox/
 [doc_conv_extract_figures]: ./examples/document_conversion_extract_figures/
 [doc_conv_extract_tables]: ./examples/document_conversion_extract_tables/
