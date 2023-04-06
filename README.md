@@ -65,6 +65,14 @@ This section will showcase examples for managing index item attachments and meta
 | 1. | [Manage attachments][manage_attachments] | Manage index item attachments <br /> [<img src=".readme_resources/manage_attachments.png" width="300px" />][manage_attachments] |
 
 
+### Knowledge graphs
+
+This section will showcase examples related to the use of knowledge graphs (KGs) in Deep Search.
+
+|    | Name               | Description |
+| -- | ------------------ | ----------- |
+| 1. | [Using Deep Search KGs with PyTorch Geometric][kg_download_quick_start] | Download knowledge graphs from Deep Search and import them in PyTorch Geometric. <br /> [<img src=".readme_resources/kg_download_quick_start.png" width="300px" />][manage_attachments] |
+
 ## Example dependencies
 
 The examples contained in this catalog depend on the `deepsearch-toolkit` as well as
@@ -100,3 +108,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [manage_attachments]: ./examples/attachment_management/
+[kg_download_quick_start]: ./examples/kg_download_quick_start/
