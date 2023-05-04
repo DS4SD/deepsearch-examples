@@ -73,6 +73,16 @@ This section will showcase examples related to the use of knowledge graphs (KGs)
 | -- | ------------------ | ----------- |
 | 1. | [Using Deep Search KGs with PyTorch Geometric][kg_download_quick_start] | Download knowledge graphs from Deep Search and import them in PyTorch Geometric. <br /> [<img src=".readme_resources/kg_download_quick_start.png" width="300px" />][manage_attachments] |
 
+### Integrations
+
+This section will showcase examples related to the integration of Deep Search with other tools and utilities.
+
+|    | Name               | Description |
+| -- | ------------------ | ----------- |
+| 1. | [Annotations on argilla.io][integration_argilla] | Use [argilla.io](https://argilla.io/) for annotating the content of documents. <br /> [<img src=".readme_resources/todo.png" width="300px" />][integration_argilla] |
+
+
+
 ## Example dependencies
 
 The examples contained in this catalog depend on the `deepsearch-toolkit` as well as
@@ -109,3 +119,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [manage_attachments]: ./examples/attachment_management/
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
+[integration_argilla]: ./examples/integration_argilla/
