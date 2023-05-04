@@ -17,6 +17,8 @@ e.g. text classification, named entities recognition, etc as well as train custo
 In this example we require the connection to a running Argilla instance. The easiest method to setup your own
 instance is using the 🤗 Hugging Face Space, as documented on https://huggingface.co/docs/hub/spaces-sdks-docker-argilla
 
+If you don't have one yet, it is very simple to launch a new HF Space using the button below.
+
 [![Deploy Argilla on Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/deploy-to-spaces-lg.svg)](https://huggingface.co/new-space?template=argilla/argilla-template-space)
 
 When running the notebook, make sure to configure the following ENV variables
@@ -28,14 +30,8 @@ export ARGILLA_API_KEY="" # for example "admin.apikey"
 
 ### Language model
 
-When creating the dataset for annotation, you have to split your input text into NLP token. In this example we use the popular spaCy NLP library for this task.
+When creating the dataset for annotation, you have to split your input text into NLP token. In this example we use the popular spaCy NLP library for this task. The notebook execution will take care of downloading the model which is selected.
 
-```bash
-# Install spaCy
-pip3 install spacy
-# Download the language model
-python3 -m spacy download en_core_web_sm
-```
 
 ## What's next?
 
