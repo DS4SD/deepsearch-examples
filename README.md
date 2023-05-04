@@ -79,7 +79,7 @@ This section will showcase examples related to the integration of Deep Search wi
 
 |    | Name               | Description |
 | -- | ------------------ | ----------- |
-| 1. | [Annotations on argilla.io][integration_argilla] | Use [argilla.io](https://argilla.io/) for annotating the content of documents. <br /> [<img src=".readme_resources/todo.png" width="300px" />][integration_argilla] |
+| 1. | [Annotations on argilla.io][integration_argilla] | Use [argilla.io](https://argilla.io/) for annotating the content of documents. <br /> [<img src=".readme_resources/integration_argilla.png" width="300px" />][integration_argilla] |
 
 
 
