@@ -24,6 +24,8 @@ mols2grid = "^1.0.0"
 python-slugify = "^8.0.1"
 torch-geometric = "^2.2"
 torch = "^1.13.0"
+argilla = "^1.6.0"
+spacy = "^3.5.2"
 
 
 [build-system]
