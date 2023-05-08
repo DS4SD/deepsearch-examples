@@ -15,11 +15,14 @@ e.g. text classification, named entities recognition, etc as well as train custo
 ### Argilla workspace
 
 In this example we require the connection to a running Argilla instance. The easiest method to setup your own
-instance is using the 🤗 Hugging Face Space, as documented on https://huggingface.co/docs/hub/spaces-sdks-docker-argilla
+instance is using the 🤗 Hugging Face Space, as documented on https://huggingface.co/docs/hub/spaces-sdks-docker-argilla or
+using any other Argilla deployment methods as listed at https://docs.argilla.io/en/latest/getting_started/installation/deployments/deployments.html.
 
 If you don't have one yet, it is very simple to launch a new HF Space using the button below.
 
 [![Deploy Argilla on Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/deploy-to-spaces-lg.svg)](https://huggingface.co/new-space?template=argilla/argilla-template-space)
+
+Note: the Hugging Face installation is not providing persistent storage. Refer to the [official deployment documentation](https://docs.argilla.io/en/latest/getting_started/installation/deployments/deployments.html) for more details.
 
 When running the notebook, make sure to configure the following ENV variables
 
