@@ -1,11 +1,11 @@
-# Export your data
+# Export to JSON
 
-In this example we demonstrate how you can export your data from a given project data
+In this example we demonstrate how you can export the index items of a given project data
 index to JSON. To illustrate this, we first create a demo project and project data index.
-Using these resources, we then upload some documents for Deep Search to convert. This
-structured data is now easily exported to JSON.
+Using these resources, we then upload some documents for Deep Search to convert. The
+resulting Deep Search index items are now easily exported to JSON.
 
-:point_right: Run the [data_export.ipynb](./data_export.ipynb) notebook.
+:point_right: Run the [json_export.ipynb](./json_export.ipynb) notebook.
 
 ## Access required
 
