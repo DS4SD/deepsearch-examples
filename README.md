@@ -53,7 +53,8 @@ This section will showcase examples for bringing your own documents, csv data, n
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents and search on them <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
-| 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
+| 2. | [Export to JSON][json_export] | Export Deep Search index items to JSON <br /> [<img src=".readme_resources/json_export.png" width="300px" />][json_export] |
+| 3. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
 
 
 ### Attachments and metadata
@@ -71,7 +72,7 @@ This section will showcase examples related to the use of knowledge graphs (KGs)
 
 |    | Name               | Description |
 | -- | ------------------ | ----------- |
-| 1. | [Using Deep Search KGs with PyTorch Geometric][kg_download_quick_start] | Download knowledge graphs from Deep Search and import them in PyTorch Geometric. <br /> [<img src=".readme_resources/kg_download_quick_start.png" width="300px" />][manage_attachments] |
+| 1. | [Using Deep Search KGs with PyTorch Geometric][kg_download_quick_start] | Download knowledge graphs from Deep Search and import them in PyTorch Geometric. <br /> [<img src=".readme_resources/kg_download_quick_start.png" width="300px" />][kg_download_quick_start] |
 
 ### Integrations
 
@@ -120,3 +121,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [manage_attachments]: ./examples/attachment_management/
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
 [integration_argilla]: ./examples/integration_argilla/
+[json_export]: ./examples/json_export/
