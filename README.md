@@ -44,6 +44,7 @@ This section will showcase examples which query data processed via Deep Search.
 | -- | ----------------- | ----------- |
 | 1. | [Data query quick start][data_query_quick_start] | Example listing data collections, making search in one and more document collections, using source for projection <br /> [<img src=".readme_resources/data_query_quick_start.png" width="300px" />][data_query_quick_start] |
 | 2. | [Chemistry search queries][data_query_chemistry] | Search the chemistry databases for known molecules <br /> [<img src=".readme_resources/data_query_chemistry.png" width="300px" />][data_query_chemistry] |
+| 3. | [Snippets and aggregations in data queries][data_query_snippets] | Extract snippets in search queries and leverage aggregations for exploratory analysis <br /> [<img src=".readme_resources/data_query_snippets.png" width="300px" />][data_query_snippets] |
 
 
 ### Bring your own
@@ -116,6 +117,7 @@ For individual model usage, please refer to the model licenses found in the orig
 [doc_conv_extract_figures]: ./examples/document_conversion_extract_figures/
 [doc_conv_extract_tables]: ./examples/document_conversion_extract_tables/
 [data_query_quick_start]: ./examples/data_query_quick_start/
+[data_query_snippets]: ./examples/data_query_snippets/
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [manage_attachments]: ./examples/attachment_management/
