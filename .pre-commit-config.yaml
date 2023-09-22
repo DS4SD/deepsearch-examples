@@ -40,16 +40,3 @@ repos:
         args: ["--check"]
       - id: poetry-export
         args: ["--without-hashes", "-f", "requirements.txt", "-o", "requirements.txt"]
-  # - repo: local
-  #   hooks:
-  #     - id: system
-  #       name: Poetry
-  #       entry: poetry lock --check
-  #       pass_filenames: false
-  #       language: system
-  # - repo: local
-  #   hooks:
-  #     - id: poetry-export
-  #       name: Poetry export
-  #       entry: poetry export --without-hashes --format=requirements.txt > requirements.txt
-  #       language: system
