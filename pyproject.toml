@@ -9,7 +9,6 @@ packages = []
 
 [tool.poetry.dependencies]
 python = ">= 3.8, <3.11"
-deepsearch-toolkit = "^0.19.1"
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
@@ -26,6 +25,7 @@ torch-geometric = "^2.2"
 torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
+deepsearch-toolkit = {git = "https://github.com/DS4SD/deepsearch-toolkit.git", rev = "upgrade-sw-api-202309"}
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}

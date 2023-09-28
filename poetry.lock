@@ -355,13 +355,13 @@ files = [
 
 [[package]]
 name = "certifi"
-version = "2022.12.7"
+version = "2023.7.22"
 description = "Python package for providing Mozilla's CA Bundle."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "certifi-2022.12.7-py3-none-any.whl", hash = "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"},
-    {file = "certifi-2022.12.7.tar.gz", hash = "sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"},
+    {file = "certifi-2023.7.22-py3-none-any.whl", hash = "sha256:92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9"},
+    {file = "certifi-2023.7.22.tar.gz", hash = "sha256:539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082"},
 ]
 
 [[package]]
@@ -772,31 +772,35 @@ files = [
 
 [[package]]
 name = "deepsearch-toolkit"
-version = "0.19.1"
+version = "0.25.0"
 description = "Interact with the Deep Search platform for new knowledge explorations and discoveries"
 optional = false
-python-versions = ">=3.8,<4.0"
-files = [
-    {file = "deepsearch_toolkit-0.19.1-py3-none-any.whl", hash = "sha256:e7e2d84624bfc9a5be7026bd4b511f8ad949680b23f5d52c6431a8cb4bee6862"},
-    {file = "deepsearch_toolkit-0.19.1.tar.gz", hash = "sha256:0100eb7c88a3458635ad3b912208c042e23a91db4f9cf51a3d2cf480fdfc056d"},
-]
+python-versions = "^3.8"
+files = []
+develop = false
 
 [package.dependencies]
-certifi = ">=2022.12.07,<2023.0.0"
-platformdirs = ">=3.5.1,<4.0.0"
-pluggy = ">=1.0.0,<2.0.0"
-pydantic = ">=1.10.8,<2.0.0"
-python-dateutil = ">=2.8.2,<3.0.0"
-requests = ">=2.27.1,<3.0.0"
-six = ">=1.16.0,<2.0.0"
-tabulate = ">=0.8.9,<0.9.0"
-tqdm = ">=4.64.0,<5.0.0"
-typer = ">=0.9.0,<0.10.0"
-urllib3 = ">=1.26.8,<2.0.0"
+certifi = "^2023.07.22"
+platformdirs = "^3.5.1"
+pluggy = "^1.0.0"
+pydantic = {version = "^1.10.8", extras = ["dotenv"]}
+python-dateutil = "^2.8.2"
+requests = "^2.27.1"
+six = "^1.16.0"
+tabulate = "^0.8.9"
+tqdm = "^4.64.0"
+typer = {version = "^0.9.0", extras = ["all"]}
+urllib3 = "^1.26.8"
 
 [package.extras]
-all = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.95.2,<0.96.0)", "python-dotenv (>=1.0.0,<2.0.0)", "uvicorn (>=0.21.1,<0.22.0)"]
-api = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.95.2,<0.96.0)", "python-dotenv (>=1.0.0,<2.0.0)", "uvicorn (>=0.21.1,<0.22.0)"]
+all = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.103.0,<0.104.0)", "uvicorn (>=0.21.1,<0.22.0)"]
+api = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.103.0,<0.104.0)", "uvicorn (>=0.21.1,<0.22.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/DS4SD/deepsearch-toolkit.git"
+reference = "upgrade-sw-api-202309"
+resolved_reference = "2face9120332e3be2cce8ad964ff13662cb6540f"
 
 [[package]]
 name = "defusedxml"
@@ -2714,6 +2718,7 @@ files = [
 ]
 
 [package.dependencies]
+python-dotenv = {version = ">=0.10.4", optional = true, markers = "extra == \"dotenv\""}
 typing-extensions = ">=4.2.0"
 
 [package.extras]
@@ -2761,6 +2766,20 @@ files = [
 
 [package.dependencies]
 six = ">=1.5"
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
+    {file = "python_dotenv-1.0.0-py3-none-any.whl", hash = "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
 name = "python-json-logger"
@@ -3410,6 +3429,17 @@ rich = ["rich"]
 test = ["pytest", "rich", "virtualenv (>20)"]
 
 [[package]]
+name = "shellingham"
+version = "1.5.3"
+description = "Tool to Detect Surrounding Shell"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "shellingham-1.5.3-py2.py3-none-any.whl", hash = "sha256:419c6a164770c9c7cfcaeddfacb3d31ac7a8db0b0f3e9c1287679359734107e9"},
+    {file = "shellingham-1.5.3.tar.gz", hash = "sha256:cb4a6fec583535bc6da17b647dd2330cf7ef30239e05d547d99ae3705fd0f7f8"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -3947,6 +3977,9 @@ files = [
 
 [package.dependencies]
 click = ">=7.1.1,<9.0.0"
+colorama = {version = ">=0.4.3,<0.5.0", optional = true, markers = "extra == \"all\""}
+rich = {version = ">=10.11.0,<14.0.0", optional = true, markers = "extra == \"all\""}
+shellingham = {version = ">=1.3.0,<2.0.0", optional = true, markers = "extra == \"all\""}
 typing-extensions = ">=3.7.4.3"
 
 [package.extras]
@@ -4271,4 +4304,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "0074b11165aba779ee1664376e74e63e0200815824486b1afe1ca41fe565ec56"
+content-hash = "64a6c2a891c4ef88d00ae11f1349f562d2c4861a485d0bd9b421071caa93bc05"
