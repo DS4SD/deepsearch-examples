@@ -19,13 +19,13 @@ wordcloud = "^1.8.2.2"
 numerize = "^0.12"
 openpyxl = "^3.0.10"
 rdkit-pypi = "^2022.9.2"
-mols2grid = "^1.0.0"
+mols2grid = "^v2.0.0"
 python-slugify = "^8.0.1"
 torch-geometric = "^2.2"
 torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
-deepsearch-toolkit = {git = "https://github.com/DS4SD/deepsearch-toolkit.git", rev = "upgrade-sw-api-202309"}
+deepsearch-toolkit = {git = "https://github.com/DS4SD/deepsearch-toolkit.git", rev = "add-chemistry-queries"}
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}

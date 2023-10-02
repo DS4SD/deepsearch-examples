@@ -44,8 +44,9 @@ This section will showcase examples which query data processed via Deep Search.
 | -- | ----------------- | ----------- |
 | 1. | [Data query quick start][data_query_quick_start] | Example listing data collections, making search in one and more document collections, using source for projection <br /> [<img src=".readme_resources/data_query_quick_start.png" width="300px" />][data_query_quick_start] |
 | 2. | [Chemistry search queries][data_query_chemistry] | Search the chemistry databases for known molecules <br /> [<img src=".readme_resources/data_query_chemistry.png" width="300px" />][data_query_chemistry] |
-| 3. | [Snippets and aggregations in data queries][data_query_snippets] | Extract snippets in search queries and leverage aggregations for exploratory analysis <br /> [<img src=".readme_resources/data_query_snippets.png" width="300px" />][data_query_snippets] |
-| 4. | [Document QA][document_qa] | Interact with your documents using Conversational AI <br /> [<img src=".readme_resources/documentqa.png" width="300px" />][document_qa] |
+| 3. | [Chemistry and patent searches via PatCID][data_query_chemistry_patcid] | Explore the chemistry databases using substructure and similarity searches and navigate to the world-wide patents which reference molecules <br /> [<img src=".readme_resources/data_query_chemistry_patcid.png" width="300px" />][data_query_chemistry] |
+| 4. | [Snippets and aggregations in data queries][data_query_snippets] | Extract snippets in search queries and leverage aggregations for exploratory analysis <br /> [<img src=".readme_resources/data_query_snippets.png" width="300px" />][data_query_snippets] |
+| 5. | [Document QA][document_qa] | Interact with your documents using Conversational AI <br /> [<img src=".readme_resources/documentqa.png" width="300px" />][document_qa] |
 
 
 ### Bring your own
@@ -120,6 +121,7 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_query_quick_start]: ./examples/data_query_quick_start/
 [data_query_snippets]: ./examples/data_query_snippets/
 [data_query_chemistry]: ./examples/data_query_chemistry/
+[data_query_chemistry_patcid]: ./examples/data_query_chemistry_patcid/
 [document_qa]: ./examples/document_qa/
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [manage_attachments]: ./examples/attachment_management/
