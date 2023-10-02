@@ -35,12 +35,12 @@ $ python extract_figures.py -i ../../data/samples/2206.01062.pdf -o results_figu
 import json
 import math
 from pathlib import Path
-from zipfile import ZipFile
+from subprocess import CalledProcessError, check_call
 from typing import List
-from subprocess import check_call, CalledProcessError
+from zipfile import ZipFile
 
-import typer
 import deepsearch as ds
+import typer
 
 
 def crop_pdf_to_image(

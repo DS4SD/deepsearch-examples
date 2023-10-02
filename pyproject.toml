@@ -27,6 +27,10 @@ torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
 
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^22.1.0"}
+pre-commit = "^2.17.0"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core"]
