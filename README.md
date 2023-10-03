@@ -20,9 +20,14 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 ## Examples
 
-> Examples rely on having valid credentials in the file `ds-auth.json` (see example content in [./ds-auth.json.example](./ds-auth.json.example)).
-> To obtain your credentials, please refer to the documentation page https://ds4sd.github.io/deepsearch-toolkit/getting_started/#authentication.
-> The file can also be generated via `deepsearch login --output ds-auth.json`
+> Examples access Deep Search via profiles.
+>
+> For instance, any example including `api = ds.CpsApi.from_env("sds")` uses the `sds`
+> profile. Provided you have access to the respective deployment (here SDS), you can set
+> up the profile by navigating to `<HOST_URL>/credentials`, i.e. in this case
+> https://sds.app.accelerate.science/credentials.
+>
+> For more information on profiles, check [Profiles][profiles].
 
 
 ### Document conversion
@@ -124,3 +129,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
 [integration_argilla]: ./examples/integration_argilla/
 [json_export]: ./examples/json_export/
+[profiles]: https://ds4sd.github.io/deepsearch-toolkit/guide/configuration/#profiles
