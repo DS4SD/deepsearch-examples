@@ -254,7 +254,8 @@ dmypy.json
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 pyvenv.cfg
-.env
+*.env
+!example.env
 .venv
 env/
 venv/
@@ -317,3 +318,5 @@ ipython_config.py
 #   git rm -r .ipynb_checkpoints/
 
 # End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks
+
+.local

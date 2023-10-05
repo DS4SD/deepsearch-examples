@@ -5,7 +5,9 @@ description = "Showcase some common usage of Deep Search for Document conversion
 authors = ["Michele Dolfi <dol@zurich.ibm.com>"]
 license = "MIT"
 readme = "README.md"
-packages = []
+packages = [
+    { include = "dsnotebooks" }
+]
 
 [tool.poetry.dependencies]
 python = ">= 3.8, <3.11"
@@ -26,6 +28,7 @@ torch-geometric = "^2.2"
 torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
+pydantic = {version = "^1.10.12", extras = ["dotenv"]}
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}
