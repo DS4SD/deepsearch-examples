@@ -807,13 +807,13 @@ files = [
 
 [[package]]
 name = "deepsearch-toolkit"
-version = "0.28.1"
+version = "0.29.0"
 description = "Interact with the Deep Search platform for new knowledge explorations and discoveries"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "deepsearch_toolkit-0.28.1-py3-none-any.whl", hash = "sha256:543267d45a393c8147e274e94e5c2b87daca0d5daf6d5778af7c0c9674f41bfc"},
-    {file = "deepsearch_toolkit-0.28.1.tar.gz", hash = "sha256:5977a7b3b16d67178f1a1ca6799095ff105b8e2cd06db9a1f383969d0a17a432"},
+    {file = "deepsearch_toolkit-0.29.0-py3-none-any.whl", hash = "sha256:ba096d201015d449212edf83f1568c367e43fa552bb2fd78a2e442d042b57e51"},
+    {file = "deepsearch_toolkit-0.29.0.tar.gz", hash = "sha256:528088b9ec8237af58fe46c9c35a971f2efa98646a8625b58a785d4f64441ff5"},
 ]
 
 [package.dependencies]
@@ -1932,13 +1932,13 @@ files = [
 
 [[package]]
 name = "mols2grid"
-version = "1.1.1"
+version = "2.0.0"
 description = "Interactive 2D small molecule viewer"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "mols2grid-1.1.1-py3-none-any.whl", hash = "sha256:936f93fd91ea5fe8f75068c7607b1e80600e050983b81d7904b8f4bee85ffdb7"},
-    {file = "mols2grid-1.1.1.tar.gz", hash = "sha256:e04d4379acfdc9636dc169ae614cfa3f0ba24f3bad4e260d7ec6f708edbc1d51"},
+    {file = "mols2grid-2.0.0-py3-none-any.whl", hash = "sha256:6fef63cb4621bff4b30b5f6654b203f50d33a196a3c594868255e7009e952212"},
+    {file = "mols2grid-2.0.0.tar.gz", hash = "sha256:9956e2f45c3b0ed68e7c12b58628fb1ea15c684e218551bc81c6ddf2b48e550b"},
 ]
 
 [package.dependencies]
@@ -1949,8 +1949,9 @@ pandas = "*"
 
 [package.extras]
 build = ["build"]
-dev = ["mols2grid[build,tests]", "tbump"]
-tests = ["cairosvg (==2.5.2)", "codecov (==2.1.12)", "flaky (==3.7.0)", "geckodriver-autoinstaller (==0.1.0)", "imagehash (>=4.3,<5.0)", "ipython (==7.12.0)", "pytest (==6.2.5)", "pytest-cov (==2.12.1)", "selenium (==3.141.0)"]
+dev = ["mols2grid[build,docs,tests]"]
+docs = ["mistune (<3.0.0)"]
+tests = ["cairosvg (==2.5.2)", "flaky (==3.7.0)", "imagehash (>=4.3,<5.0)", "ipython (==7.12.0)", "pyautogecko (==0.1.3)", "pytest (==6.2.5)", "pytest-cov (==2.12.1)", "selenium (==4.10.0)"]
 
 [[package]]
 name = "monotonic"
@@ -4389,4 +4390,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "5efbb504198cc49f0ef689c62ab8675f20136b2bd49a264dab601ddbe18c08a4"
+content-hash = "39a2ce461a180179110aa1d8676af9d2d1592e66fb75c8d783ca17c935cea75f"

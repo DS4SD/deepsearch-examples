@@ -11,7 +11,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">= 3.8, <3.11"
-deepsearch-toolkit = "^0.28.0"
+deepsearch-toolkit = "^0.29.0"
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
@@ -22,7 +22,7 @@ wordcloud = "^1.8.2.2"
 numerize = "^0.12"
 openpyxl = "^3.0.10"
 rdkit-pypi = "^2022.9.2"
-mols2grid = "^1.0.0"
+mols2grid = "^2.0.0"
 python-slugify = "^8.0.1"
 torch-geometric = "^2.2"
 torch = "^1.13.0"
