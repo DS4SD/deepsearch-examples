@@ -58,9 +58,8 @@ This section will showcase examples for bringing your own documents, csv data, n
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents and search on them <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
-| 2. | [Export to JSON][json_export] | Export Deep Search index items to JSON <br /> [<img src=".readme_resources/json_export.png" width="300px" />][json_export] |
-| 3. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
+| 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents, search on them and export the result as JSON files. <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
+| 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
 
 
 ### Attachments and metadata

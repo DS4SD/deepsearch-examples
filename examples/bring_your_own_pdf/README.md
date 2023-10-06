@@ -4,8 +4,9 @@ In this example we combine the document conversion capabilities of Deep Search w
 From the Deep Search Workspace, we create a new project data index which can host our own PDF documents.
 Once the upload is completed, we will be able to query the documents, similar to the public data which we
 explored in the [Data query quick start example](../data_query_quick_start/).
+In the last steps of the example, we additionally export the converted documents as JSON files.
 
-:point_right: Run the [upload_and_explore_pdfs.ipynb](./upload_and_explore_pdfs.ipynb) notebook.
+:point_right: Run the [upload_explore_download_pdfs.ipynb](./upload_explore_download_pdfs.ipynb) notebook.
 
 
 ## Access required
