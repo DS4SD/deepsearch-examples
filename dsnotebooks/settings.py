@@ -17,3 +17,11 @@ class ProjectNotebookSettings(NotebookSettings):
     @validator("proj_key")
     def set_proj_key(cls, v):
         return v or input("Project key: ")
+
+
+class KGProjectNotebookSettings(ProjectNotebookSettings):
+    kg_key: str = ""
+
+    @validator("kg_key")
+    def set_kg_key(cls, v):
+        return v or input("Knowledge graph key: ")

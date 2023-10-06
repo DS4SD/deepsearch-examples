@@ -8,7 +8,6 @@ In the last steps of the example, we additionally export the converted documents
 
 :point_right: Run the [upload_explore_download_pdfs.ipynb](./upload_explore_download_pdfs.ipynb) notebook.
 
-
 ## Access required
 
 The content of this notebook requires access to Deep Search capabilities which are not
