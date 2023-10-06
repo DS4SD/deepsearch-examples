@@ -5,11 +5,13 @@ description = "Showcase some common usage of Deep Search for Document conversion
 authors = ["Michele Dolfi <dol@zurich.ibm.com>"]
 license = "MIT"
 readme = "README.md"
-packages = []
+packages = [
+    { include = "dsnotebooks" }
+]
 
 [tool.poetry.dependencies]
 python = ">= 3.8, <3.11"
-deepsearch-toolkit = "^0.19.1"
+deepsearch-toolkit = "^0.28.0"
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
@@ -26,6 +28,7 @@ torch-geometric = "^2.2"
 torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
+pydantic = {version = "^1.10.12", extras = ["dotenv"]}
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}
