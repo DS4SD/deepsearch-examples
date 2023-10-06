@@ -20,15 +20,13 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 ## Examples
 
-> Examples access Deep Search via profiles.
->
-> For instance, any example including `api = ds.CpsApi.from_env("sds")` uses the `sds`
-> profile. Provided you have access to the respective deployment (here SDS), you can set
-> up the profile by navigating to `<HOST_URL>/credentials`, i.e. in this case
-> https://sds.app.accelerate.science/credentials.
->
-> For more information on profiles, check [Profiles][profiles].
+### Setup and usage
 
+Each example starts by defining its input parameters. This is supported by Pydantic
+Settings, allowing automated loading from a `.env` file or env vars. Furthermore, access
+is based on [Profiles][profiles]. To set up a profile, visit `<HOST_URL>/credentials`
+(e.g. for SDS that would be: https://sds.app.accelerate.science/credentials). Unless
+otherwise configured, the profile used is the active one.
 
 ### Document conversion
 

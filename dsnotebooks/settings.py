@@ -1,13 +1,14 @@
+from typing import Optional
 from pydantic import BaseSettings, validator
 from dotenv import find_dotenv
 
 class NotebookSettings(BaseSettings):
     class Config:
-        env_prefix = "DS_NTBK_"
+        env_prefix = "DS_BK_"
         env_file = find_dotenv()
         env_file_encoding = "utf-8"
 
-    profile: str = "sds"
+    profile: Optional[str] = None
 
 
 class ProjectNotebookSettings(NotebookSettings):
