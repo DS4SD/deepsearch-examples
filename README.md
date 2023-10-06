@@ -20,10 +20,13 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 ## Examples
 
-> Examples rely on having valid credentials in the file `ds-auth.json` (see example content in [./ds-auth.json.example](./ds-auth.json.example)).
-> To obtain your credentials, please refer to the documentation page https://ds4sd.github.io/deepsearch-toolkit/getting_started/#authentication.
-> The file can also be generated via `deepsearch login --output ds-auth.json`
+### Setup and usage
 
+Each example starts by defining its input parameters. This is supported by Pydantic
+Settings, allowing automated loading from a `.env` file or env vars. Furthermore, access
+is based on [Profiles][profiles]. To set up a profile, visit `<HOST_URL>/credentials`
+(e.g. for SDS that would be: https://sds.app.accelerate.science/credentials). Unless
+otherwise configured, the profile used is the active one.
 
 ### Document conversion
 
@@ -55,9 +58,8 @@ This section will showcase examples for bringing your own documents, csv data, n
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents and search on them <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
-| 2. | [Export to JSON][json_export] | Export Deep Search index items to JSON <br /> [<img src=".readme_resources/json_export.png" width="300px" />][json_export] |
-| 3. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
+| 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents, search on them and export the result as JSON files. <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
+| 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
 
 
 ### Attachments and metadata
@@ -128,3 +130,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
 [integration_argilla]: ./examples/integration_argilla/
 [json_export]: ./examples/json_export/
+[profiles]: https://ds4sd.github.io/deepsearch-toolkit/guide/configuration/#profiles
