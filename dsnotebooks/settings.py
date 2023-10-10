@@ -1,6 +1,7 @@
 from typing import Optional
 from pydantic import BaseSettings, validator
 from dotenv import find_dotenv
+from datetime import datetime
 
 class NotebookSettings(BaseSettings):
     class Config:
@@ -8,11 +9,12 @@ class NotebookSettings(BaseSettings):
         env_file = find_dotenv()
         env_file_encoding = "utf-8"
 
-    profile: Optional[str] = None
+    profile: Optional[str] = None  # defaulting to the active profile
 
 
 class ProjectNotebookSettings(NotebookSettings):
     proj_key: str = ""
+    new_idx_name: str = f"tmp_{datetime.now().strftime('%Y%m%d%H%M%S')}"
     cleanup: bool = True
 
     @validator("proj_key")

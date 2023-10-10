@@ -1,0 +1,31 @@
+name: "Run notebooks"
+
+on:
+  workflow_dispatch:  # no body
+  schedule:
+    - cron: "0 17 * * *"  # UTC-based
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install system dependencies
+        run: sudo apt-get install poppler-utils
+      - name: Install poetry
+        run: pipx install poetry==1.6.1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: poetry
+      - name: Install package and dependencies
+        run: poetry install
+      - name: Run notebooks
+        env:
+          DEEPSEARCH_HOST: ${{ vars.DEEPSEARCH_HOST }}
+          DEEPSEARCH_USERNAME: ${{ secrets.DEEPSEARCH_USERNAME }}
+          DEEPSEARCH_API_KEY: ${{ secrets.DEEPSEARCH_API_KEY }}
+          DEEPSEARCH_VERIFY_SSL: ${{ vars.DEEPSEARCH_VERIFY_SSL }}
+          DS_NB_PROJ_KEY: ${{ vars.DS_NB_PROJ_KEY }}
+          DS_NR_EXCLUDED: ${{ vars.DS_NR_EXCLUDED }}
+        run: poetry run python -m nbrunner.nb_runner
