@@ -16,7 +16,7 @@ jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
 matplotlib = "^3.6.2"
-pillow = "^9.3.0"
+pillow = "^10.0.1"
 pandas = "^1.5.1"
 wordcloud = "^1.8.2.2"
 numerize = "^0.12"
@@ -28,7 +28,8 @@ torch-geometric = "^2.2"
 torch = "^1.13.0"
 argilla = "^1.6.0"
 spacy = "^3.5.2"
-pydantic = {version = "^1.10.12", extras = ["dotenv"]}
+pydantic = "^1.10.12"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}
