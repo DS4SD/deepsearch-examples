@@ -7,7 +7,7 @@ with Deep Search, exported, modified and next you would like to re-ingest them.
 In this example we demonstrate how a folder with converted JSON documents can be uploaded to a data collection
 in Deep Search.
 
-:point_right: Run the [upload_converted_docs.ipynb](./upload_converted_docs.ipynb) notebook.
+:point_right: Run the [upload_converted_documents.ipynb](./upload_converted_documents.ipynb) notebook.
 
 
 ## Access required
