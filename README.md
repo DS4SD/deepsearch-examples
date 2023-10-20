@@ -59,7 +59,8 @@ This section will showcase examples for bringing your own documents, csv data, n
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [Bring your own PDF][bring_your_own_pdf] | Upload your own PDF documents, search on them and export the result as JSON files. <br /> [<img src=".readme_resources/bring_your_own_pdf.png" width="300px" />][bring_your_own_pdf] |
-| 2. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
+| 2. | [Bring your own converted documents][bring_your_own_converted_documents] | Upload your documents already formatted as JSON. <br /> [<img src=".readme_resources/bring_your_own_converted_documents.png" width="300px" />][bring_your_own_converted_documents] |
+| 3. | Bring your own DataFrame | Bring your own DataFrame from CSV, XLSX, etc and explore the content in a knowledge graph <br /> |
 
 
 ### Attachments and metadata
@@ -126,6 +127,7 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_query_chemistry_patcid]: ./examples/data_query_chemistry_patcid/
 [document_qa]: ./examples/document_qa/
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
+[bring_your_own_converted_documents]: ./bring_your_own_converted_documents/
 [manage_attachments]: ./examples/attachment_management/
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
 [integration_argilla]: ./examples/integration_argilla/
