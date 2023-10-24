@@ -807,35 +807,31 @@ files = [
 
 [[package]]
 name = "deepsearch-toolkit"
-version = "0.29.0"
+version = "0.30.0"
 description = "Interact with the Deep Search platform for new knowledge explorations and discoveries"
 optional = false
-python-versions = "^3.8"
-files = []
-develop = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "deepsearch_toolkit-0.30.0-py3-none-any.whl", hash = "sha256:14cb0e41cb21d6affe786bcafbe82c552627494b60c10e043c0b6ed2d6eca662"},
+    {file = "deepsearch_toolkit-0.30.0.tar.gz", hash = "sha256:a7924e1cfcdbd70c0407adde9cb402aebc53b92e19e281b58b0df359fac84d92"},
+]
 
 [package.dependencies]
-certifi = "^2023.07.22"
-platformdirs = "^3.5.1"
-pluggy = "^1.0.0"
-pydantic = {version = "^1.10.8", extras = ["dotenv"]}
-python-dateutil = "^2.8.2"
-requests = "^2.27.1"
-six = "^1.16.0"
-tabulate = "^0.8.9"
-tqdm = "^4.64.0"
-typer = {version = "^0.9.0", extras = ["all"]}
-urllib3 = "^1.26.8"
+certifi = ">=2023.07.22,<2024.0.0"
+platformdirs = ">=3.5.1,<4.0.0"
+pluggy = ">=1.0.0,<2.0.0"
+pydantic = {version = ">=1.10.8,<2.0.0", extras = ["dotenv"]}
+python-dateutil = ">=2.8.2,<3.0.0"
+requests = ">=2.27.1,<3.0.0"
+six = ">=1.16.0,<2.0.0"
+tabulate = ">=0.8.9,<0.9.0"
+tqdm = ">=4.64.0,<5.0.0"
+typer = {version = ">=0.9.0,<0.10.0", extras = ["all"]}
+urllib3 = ">=1.26.8,<2.0.0"
 
 [package.extras]
 all = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.103.0,<0.104.0)", "uvicorn (>=0.21.1,<0.22.0)"]
 api = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.103.0,<0.104.0)", "uvicorn (>=0.21.1,<0.22.0)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/DS4SD/deepsearch-toolkit.git"
-reference = "expose-ds-uploader"
-resolved_reference = "798a7767ec2178cf024ec20199cd07999b94548b"
 
 [[package]]
 name = "defusedxml"
@@ -4383,4 +4379,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "3ac94a789cfd0a19f89f62f36e8f5801e9ab297c6df8f0bd0fd936ce2778d689"
+content-hash = "e35a72017cda7e22932e330bceda11267692d363bf12ee771eac0d6e38698f26"
