@@ -11,7 +11,7 @@ $ python convert_tables_to_html.py --help
  Usage: convert_tables_to_html.py [OPTIONS]
 
 ╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *                 -i      PATH        Input directory with converted documents (ZIP) [default: None] [required]     │
+│ *                 -i      PATH        Input directory with converted documents [default: None] [required]           │
 │ *                 -o      PATH        Output directory where tables are saved [default: None] [required]            │
 │    --mode                 [zip|json]  Scan for converted zip files or for document JSON files as input              │
 │                                       [default: FileInputMode.zip]                                                  │
@@ -93,9 +93,9 @@ def write_table(item, struct_only=False):
 
             # celltag = 'th' if label_class == 'header' else 'td'
             celltag = "td"
-            style = 'style="text-align: center;"' if label_class == "header" else ""
+            # style = 'style="text-align: center;"' if label_class == "header" else ""
 
-            opening_tag = f"{celltag}"  # rowstart="{rowstart}" colstart="{colstart}"'
+            opening_tag = f"{celltag}"
             # if style:
             #    opening_tag += f' {style}'
             if rowspan > 1:
@@ -183,7 +183,7 @@ def extract_tables_from_json_doc(
 
 def main(
     input_dir: Path = typer.Option(
-        ..., "-i", help="Input directory with converted documents (ZIP)"
+        ..., "-i", help="Input directory with converted documents"
     ),
     output_dir: Path = typer.Option(
         ..., "-o", help="Output directory where tables are saved"
@@ -192,7 +192,7 @@ def main(
         FileInputMode,
         typer.Option(
             case_sensitive=False,
-            help="Scan for converted zip files or for document JSON files as input",
+            help="Scan for converted zip files or for document JSON files as input"
         ),
     ] = FileInputMode.zip,
     structure_only: bool = typer.Option(
