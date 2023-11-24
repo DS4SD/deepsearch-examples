@@ -123,6 +123,7 @@ For individual model usage, please refer to the model licenses found in the orig
 [doc_conv_extract_tables]: ./examples/document_conversion_extract_tables/
 [data_query_quick_start]: ./examples/data_query_quick_start/
 [data_query_snippets]: ./examples/data_query_snippets/
+[data_extract_figures]: ./examples/data_extract_figures/
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [data_query_chemistry_patcid]: ./examples/data_query_chemistry_patcid/
 [document_qa]: ./examples/document_qa/
