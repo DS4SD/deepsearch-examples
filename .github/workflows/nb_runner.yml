@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Refresh pkg info # https://github.com/actions/runner-images/issues/8047
+        run: sudo apt-get update
       - name: Install system dependencies
         run: sudo apt-get install poppler-utils
       - name: Install poetry
