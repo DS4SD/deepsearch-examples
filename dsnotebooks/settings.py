@@ -1,7 +1,10 @@
-from typing import Optional
-from pydantic import BaseSettings, validator
-from dotenv import find_dotenv
 from datetime import datetime
+from typing import Optional
+
+from dotenv import find_dotenv
+from pydantic import validator
+from pydantic_settings import BaseSettings
+
 
 class NotebookSettings(BaseSettings):
     class Config:
