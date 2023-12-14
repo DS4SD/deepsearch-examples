@@ -7,6 +7,7 @@ from typing import Optional, Set
 import deepsearch as ds
 import nbformat
 from deepsearch.cps.client.components.elastic import ElasticProjectDataCollectionSource
+from nbclient.exceptions import CellTimeoutError
 from nbconvert.preprocessors import CellExecutionError, ExecutePreprocessor
 from rich.console import Console
 from rich.style import Style
@@ -55,7 +56,7 @@ class NotebookRunner:
         )
         try:
             out = ep.preprocess(nb, {"metadata": {"path": notebook_path.parent}})
-        except CellExecutionError as e:
+        except (CellExecutionError, CellTimeoutError) as e:
             print(f"=> Error during {run_id}; check {output_filename} for details")
             print(e.traceback)
             out = None
