@@ -7,11 +7,8 @@ from typing import Optional, Set
 import deepsearch as ds
 import nbformat
 from deepsearch.cps.client.components.elastic import ElasticProjectDataCollectionSource
-from nbconvert.preprocessors import (
-    CellExecutionError,
-    CellTimeoutError,
-    ExecutePreprocessor,
-)
+from nbclient.exceptions import CellTimeoutError
+from nbconvert.preprocessors import CellExecutionError, ExecutePreprocessor
 from rich.console import Console
 from rich.style import Style
 from rich.table import Table
