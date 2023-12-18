@@ -49,7 +49,16 @@ This section will showcase examples which query data processed via Deep Search.
 | 2. | [Chemistry search queries][data_query_chemistry] | Search the chemistry databases for known molecules <br /> [<img src=".readme_resources/data_query_chemistry.png" width="300px" />][data_query_chemistry] |
 | 3. | [Chemistry and patent searches via PatCID][data_query_chemistry_patcid] | Explore the chemistry databases using substructure and similarity searches and navigate to the world-wide patents which reference molecules <br /> [<img src=".readme_resources/data_query_chemistry_patcid.png" width="300px" />][data_query_chemistry] |
 | 4. | [Snippets and aggregations in data queries][data_query_snippets] | Extract snippets in search queries and leverage aggregations for exploratory analysis <br /> [<img src=".readme_resources/data_query_snippets.png" width="300px" />][data_query_snippets] |
-| 5. | [Document QA][document_qa] | Interact with your documents using Conversational AI <br /> [<img src=".readme_resources/documentqa.png" width="300px" />][document_qa] |
+
+
+### Semantic queries & RAG
+
+This section will showcase examples of semantic capabilitilies in the area of Q&A using RAG.
+
+|    | Name              | Description |
+| -- | ----------------- | ----------- |
+| 1. | [QA on a specific document][qa_single_doc] | Interact with a specific document using Conversational AI <br /> [<img src=".readme_resources/documentqa.png" width="300px" />][qa_single_doc] |
+| 2. | [QA on a document collection][qa_doc_collection] | Interact with a document collection using Conversational AI <br /> [<img src=".readme_resources/qa_doc_collection.png" width="300px" />][qa_doc_collection] |
 
 
 ### Bring your own
@@ -126,7 +135,8 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_extract_figures]: ./examples/data_extract_figures/
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [data_query_chemistry_patcid]: ./examples/data_query_chemistry_patcid/
-[document_qa]: ./examples/document_qa/
+[qa_single_doc]: ./examples/qa_single_doc
+[qa_doc_collection]: ./examples/qa_doc_collection
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [bring_your_own_converted_documents]: ./bring_your_own_converted_documents/
 [manage_attachments]: ./examples/attachment_management/

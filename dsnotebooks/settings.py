@@ -16,7 +16,7 @@ class NotebookSettings(BaseSettings):
 
 
 class ProjectNotebookSettings(NotebookSettings):
-    proj_key: str = ""
+    proj_key: str = None
     new_idx_name: str = f"tmp_{datetime.now().strftime('%Y%m%d%H%M%S')}"
     cleanup: bool = True
 
@@ -31,3 +31,13 @@ class KGProjectNotebookSettings(ProjectNotebookSettings):
     @validator("kg_key")
     def set_kg_key(cls, v):
         return v or input("Knowledge graph key: ")
+
+
+class CollQANotebookSettings(ProjectNotebookSettings):
+    sem_on_idx_key: str
+
+
+class DocQANotebookSettings(CollQANotebookSettings):
+    sem_on_idx_doc_hash: str
+    sem_off_idx_key: str
+    sem_off_idx_doc_hash: str
