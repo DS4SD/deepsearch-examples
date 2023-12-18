@@ -30,4 +30,8 @@ jobs:
           DEEPSEARCH_VERIFY_SSL: ${{ vars.DEEPSEARCH_VERIFY_SSL }}
           DS_NB_PROJ_KEY: ${{ vars.DS_NB_PROJ_KEY }}
           DS_NR_EXCLUDED: ${{ vars.DS_NR_EXCLUDED }}
+          DS_NB_SEM_ON_IDX_KEY: ${{ vars.DS_NB_SEM_ON_IDX_KEY }}
+          DS_NB_SEM_ON_IDX_DOC_HASH: ${{ vars.DS_NB_SEM_ON_IDX_DOC_HASH }}
+          DS_NB_SEM_OFF_IDX_KEY: ${{ vars.DS_NB_SEM_OFF_IDX_KEY }}
+          DS_NB_SEM_OFF_IDX_DOC_HASH: ${{ vars.DS_NB_SEM_OFF_IDX_DOC_HASH }}
         run: poetry run python -m nbrunner.nb_runner
