@@ -849,8 +849,8 @@ api = ["anyio (>=3.6.2,<4.0.0)", "fastapi (>=0.103.0,<0.104.0)", "uvicorn (>=0.2
 [package.source]
 type = "git"
 url = "https://github.com/DS4SD/deepsearch-toolkit"
-reference = "ce4f3f5"
-resolved_reference = "ce4f3f59bca89ef3bcd56fc1d6b0942d0fa53964"
+reference = "5209cc2"
+resolved_reference = "5209cc21525be2e6ab6f06f9a13c2fc00b7e6980"
 
 [[package]]
 name = "defusedxml"
@@ -4502,4 +4502,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "76678e8981cec3a5f1e20c135a878a81620984b520176beabdf8d8e41ee5fef5"
+content-hash = "fac83d5a9990971f131ce8d514e4fd3a9dcdf624551677f9f6cc26515214ef8b"

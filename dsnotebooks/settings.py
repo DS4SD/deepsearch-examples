@@ -33,5 +33,11 @@ class KGProjectNotebookSettings(ProjectNotebookSettings):
         return v or input("Knowledge graph key: ")
 
 
-class SemanticNotebookSettings(ProjectNotebookSettings):
-    sem_enabled_idx_key: str
+class CollQANotebookSettings(ProjectNotebookSettings):
+    sem_on_idx_key: str
+
+
+class DocQANotebookSettings(CollQANotebookSettings):
+    sem_on_idx_doc_hash: str
+    sem_off_idx_key: str
+    sem_off_idx_doc_hash: str
