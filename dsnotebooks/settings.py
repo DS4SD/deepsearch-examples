@@ -17,7 +17,7 @@ class NotebookSettings(BaseSettings):
 
 
 class ProjectNotebookSettings(NotebookSettings):
-    proj_key: str = None
+    proj_key: str = ""
     new_idx_name: str = f"tmp_{datetime.now().strftime('%Y%m%d%H%M%S')}"
     cleanup: bool = True
 
