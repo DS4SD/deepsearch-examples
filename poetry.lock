@@ -821,13 +821,13 @@ files = [
 
 [[package]]
 name = "deepsearch-toolkit"
-version = "0.36.0"
+version = "0.39.0"
 description = "Interact with the Deep Search platform for new knowledge explorations and discoveries"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "deepsearch_toolkit-0.36.0-py3-none-any.whl", hash = "sha256:855952e48938e7bc3a67ddc6168cc4e3591f4b501968969ec9d7fcb136cc94cf"},
-    {file = "deepsearch_toolkit-0.36.0.tar.gz", hash = "sha256:823af7be7f6a00d8cebadcfe6ab39790f5c4f04e2f1c7a85639267bc527e28fe"},
+    {file = "deepsearch_toolkit-0.39.0-py3-none-any.whl", hash = "sha256:95cdeb8dff1ad91d067d52a184c9963b67e0350d58cbfb126e4d21c3e4832fb0"},
+    {file = "deepsearch_toolkit-0.39.0.tar.gz", hash = "sha256:75a659d43daa4da3ef0733f7cfbbfe5004a93332196ebfeee5d53f353d1da602"},
 ]
 
 [package.dependencies]
@@ -4528,4 +4528,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "fb70bc36e1b7e17c3537041d0871fe4910d596ac1c067b472d2777d501fe7336"
+content-hash = "b666b7aab56051bf8a753a8eb7a4ba6f98c51ba4cd1866b4375e0d68a2d5b8ab"
