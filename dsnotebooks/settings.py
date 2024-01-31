@@ -5,6 +5,7 @@ from dotenv import find_dotenv
 from pydantic import validator
 from pydantic_settings import BaseSettings
 
+from deepsearch.cps.queries import ConstrainedWeight
 
 class NotebookSettings(BaseSettings):
     class Config:
@@ -35,7 +36,9 @@ class KGProjectNotebookSettings(ProjectNotebookSettings):
 
 class CollQANotebookSettings(ProjectNotebookSettings):
     sem_on_idx_key: str
-
+    retr_k: int = 5
+    text_weight: ConstrainedWeight = 0.1
+    rerank: bool = False
 
 class DocQANotebookSettings(CollQANotebookSettings):
     sem_on_idx_doc_hash: str
