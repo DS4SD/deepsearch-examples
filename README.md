@@ -38,6 +38,12 @@ otherwise configured, the profile used is the active one.
 | 4. | [Extract figures from documents][doc_conv_extract_figures] | Given a PDF file, extract the figures <br /> [<img src=".readme_resources/extract_figures.png" width="300px" />][doc_conv_extract_figures] |
 | 5. | [Extract tables][doc_conv_extract_tables] | Given a PDF file, extract the tables <br /> [<img src=".readme_resources/extract_tables.png" width="300px" />][doc_conv_extract_tables] |
 
+### NLP on Documents
+
+|    | Name              | Description |
+| -- | ----------------- | ----------- |
+| 1. | [NLP on documents][nlp_on_documents] | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
+
 
 ### Data queries
 
