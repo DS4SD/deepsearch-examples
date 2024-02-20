@@ -42,7 +42,7 @@ otherwise configured, the profile used is the active one.
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [NLP on documents][nlp_on_documents] | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
+| 1. | [NLP on documents](examples/nlp_on_documents) | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
 
 
 ### Data queries
