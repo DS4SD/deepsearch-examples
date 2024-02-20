@@ -43,7 +43,7 @@ otherwise configured, the profile used is the active one.
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [NLP on documents](examples/nlp_on_documents) | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
-
+| 2. | [Reference Parsing](examples/nlp_for_references) | Examples on how to parse references from Documents |
 
 ### Data queries
 
