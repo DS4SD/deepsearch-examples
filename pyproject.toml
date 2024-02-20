@@ -31,7 +31,7 @@ python-dotenv = "^1.0.0"
 pydantic-settings = "^2.1.0"
 nbclient = "^0.9.0"
 pandas = "^1.5.1"
-argilla = "1.24.0"
+argilla = "^1.24.0"
 deepsearch-glm = ">=0.12.2"
 
 [tool.poetry.group.dev.dependencies]
