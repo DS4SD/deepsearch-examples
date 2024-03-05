@@ -24,9 +24,7 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 
 Each example starts by defining its input parameters. This is supported by Pydantic
 Settings, allowing automated loading from a `.env` file or env vars. Furthermore, access
-is based on [Profiles][profiles]. To set up a profile, visit `<HOST_URL>/credentials`
-(e.g. for SDS that would be: https://sds.app.accelerate.science/credentials). Unless
-otherwise configured, the profile used is the active one.
+is based on [Profiles][profiles]. Unless otherwise configured, the profile used is the active one.
 
 ### Document conversion
 
@@ -149,4 +147,4 @@ For individual model usage, please refer to the model licenses found in the orig
 [kg_download_quick_start]: ./examples/kg_download_quick_start/
 [integration_argilla]: ./examples/integration_argilla/
 [json_export]: ./examples/json_export/
-[profiles]: https://ds4sd.github.io/deepsearch-toolkit/guide/configuration/#profiles
+[profiles]: https://ds4sd.github.io/deepsearch-toolkit/#set-up-your-profile

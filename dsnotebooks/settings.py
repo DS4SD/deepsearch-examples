@@ -3,8 +3,7 @@ from typing import Optional
 
 from deepsearch.cps.queries import ConstrainedWeight
 from dotenv import find_dotenv
-from pydantic import validator
-from pydantic_settings import BaseSettings
+from pydantic.v1 import BaseSettings, validator
 
 
 class NotebookSettings(BaseSettings):
