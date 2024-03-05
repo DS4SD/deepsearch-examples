@@ -1,7 +1,7 @@
 from typing import List
 
 from dotenv import find_dotenv
-from pydantic_settings import BaseSettings
+from pydantic.v1 import BaseSettings
 
 
 class NotebookRunnerSettings(BaseSettings):
