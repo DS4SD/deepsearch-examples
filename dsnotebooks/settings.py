@@ -39,6 +39,7 @@ class CollQANotebookSettings(ProjectNotebookSettings):
     text_weight: ConstrainedWeight = 0.1
     rerank: bool = False
     skip_ingested_docs: bool = True
+    raise_on_rag_err: bool = True
 
 
 class DocQANotebookSettings(CollQANotebookSettings):
