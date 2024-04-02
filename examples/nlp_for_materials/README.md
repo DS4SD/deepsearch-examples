@@ -1,5 +1,5 @@
-# NLP on Documents - Quick start
+# NLP on Documents - Extracting materials
 
-:point_right: Run the [nlp_on_documents.ipynb](./nlp_on_documents.ipynb)
-notebook to quickly get started with document conversion.
+:point_right: Run the [nlp_for_materials.ipynb](./nlp_for_materials.ipynb)
+notebook to quickly extract materials mentioned in documents.
 
