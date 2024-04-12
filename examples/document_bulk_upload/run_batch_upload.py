@@ -261,6 +261,8 @@ async def main():
 
         save_elements(RESUME_FILENAME, pending_items)
 
+        api.refresh_token()
+
     print("Upload process completed.")
 
 
