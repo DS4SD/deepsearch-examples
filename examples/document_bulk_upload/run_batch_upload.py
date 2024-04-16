@@ -261,7 +261,11 @@ async def main():
 
         save_elements(RESUME_FILENAME, pending_items)
 
-        api.refresh_token()
+        try:
+            api.refresh_token()
+        except:
+            print("Error while refreshing token")
+            pass
 
     print("Upload process completed.")
 
