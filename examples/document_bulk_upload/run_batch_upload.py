@@ -29,7 +29,7 @@
 
 import argparse
 import asyncio
-import json
+import sys
 import logging
 import os.path
 import signal
@@ -82,13 +82,13 @@ async def upload_for_key_prefix(
                 body=payload,
             )
 
-            print(
+            logging.info(
                 f"Submitting key_prefix={cos_coordinates_sub.key_prefix} with task_id {task_id}..."
             )
 
             request_status = await wait_for_task(api, coords, task_id)
 
-            print(f"Report for {key_prefix} with task_id {task_id}: {request_status}")
+            logging.info(f"Report for {key_prefix} with task_id {task_id}: {request_status}")
             return [key_prefix], request_status
         except Exception as e:
             logging.error(
@@ -99,16 +99,17 @@ async def upload_for_key_prefix(
 
 async def upload_for_urls(api, coords, url_batch, semaphore: asyncio.Semaphore):
     async with semaphore:  # This will limit the number of concurrent uploads
+        task_id = None
         try:
 
             payload = {"file_url": url_batch}
             task_id = api.data_indices.upload_file(coords=coords, body=payload)
 
-            print(f"Submitting url batch with task_id {task_id}")
+            logging.info(f"Submitting url batch with task_id {task_id}")
 
             request_status = await wait_for_task(api, coords, task_id)
 
-            print(f"Report for url_batch of task_id {task_id}: {request_status}")
+            logging.info(f"Report for url_batch of task_id {task_id}: {request_status}")
             return url_batch, request_status
         except Exception as e:
             logging.error(
@@ -125,7 +126,7 @@ async def wait_for_task(api, coords, task_id):
                 proj_key=coords.proj_key, task_id=task_id
             )
         except ApiException as e:
-            print(
+            logging.warning(
                 f"Requesting status of task_id={task_id} failed with HTTP error {e.status}"
             )
 
@@ -143,20 +144,21 @@ async def wait_for_task(api, coords, task_id):
     return request_status
 
 
-def save_elements(filename: str, elements: list):
+def save_elements(filename: str, items: list):
     with open(filename, "w") as f:
-        json.dump(list(elements), f)
+        f.writelines(items)
 
 
 def handle_exit_signal(a, b):
-    print("Received termination signal. Saving current state...")
-    save_elements(RESUME_FILENAME, elements)
-    print("Current state saved. Exiting...")
-    exit(0)  # Exit gracefully
+    logging.info("Received termination signal. Saving current state...")
+    save_elements(RESUME_FILENAME, pending_items)
+    logging.info("Current state saved. Exiting...")
+    sys.exit(0)  # Exit gracefully
 
 
 async def main():
     global elements
+    global pending_items
     global RESUME_FILENAME
 
     parser = argparse.ArgumentParser(
@@ -196,21 +198,18 @@ async def main():
             "you must provide s3-credentials with input-type S3."
         )
 
-    if args.input_type == InputSource.S3 and not args.batch_size != 1:
+    if args.input_type == InputSource.S3 and args.batch_size != 1:
         raise argparse.ArgumentTypeError("Batch size must be 1 when using S3 input.")
 
     if args.input_type == InputSource.S3 and not args.s3_credentials:
         raise argparse.ArgumentTypeError(
             "you must provide s3-credentials with input-type S3."
         )
-
-    if args.resume_point:
-        with open(args.resume_point, "r") as f:
-            elements = list(json.load(f))
-        print(f"Resuming from {args.resume_point}")
-    else:
-        with open(args.input_file, "r") as f:
-            elements = list(f.readlines())
+    
+    save_file = args.resume_point if args.resume_point else args.input_file
+    with open(save_file) as f:
+        logging.info(f"Reading elements from {save_file}")
+        elements = list(f.readlines())
 
     s3_cred = None
     if args.input_type == InputSource.S3:
@@ -218,10 +217,9 @@ async def main():
 
     RESUME_FILENAME = RESUME_FILENAME or args.resume_point
 
-    print(f"To resume this job later, provide {RESUME_FILENAME} to --resume-point.")
-
     pending_items = elements
     save_elements(RESUME_FILENAME, pending_items)
+    logging.info(f"To resume this job later, provide --resume-point {RESUME_FILENAME} to the command line.")
 
     semaphore = asyncio.Semaphore(args.concurrency)
     signal.signal(signal.SIGTERM, handle_exit_signal)
@@ -248,23 +246,29 @@ async def main():
         ]
 
     total_count = len(elements)
-    print(f"Processing {total_count} elements.")
+    logging.info(f"Processing {total_count} elements.")
 
     for future in asyncio.as_completed(tasks):
         result = await future
         elements, report = result
 
-        print(f"Batch completed with result: {report}")
+        logging.info(f"Batch completed with result: {report}")
 
         if report is not None:
             for e in elements:
                 pending_items.remove(e)
 
-        print(f"{len(pending_items)} of {total_count} left to complete.")
+        logging.info(f"{len(pending_items)} of {total_count} left to complete.")
 
         save_elements(RESUME_FILENAME, pending_items)
 
-    print("Upload process completed.")
+        try:
+            api.refresh_token()
+        except:
+            logging.warning("Error while refreshing token")
+            pass
+
+    logging.info("Upload process completed.")
 
 
 if __name__ == "__main__":
