@@ -198,7 +198,7 @@ async def main():
             "you must provide s3-credentials with input-type S3."
         )
 
-    if args.input_type == InputSource.S3 and not args.batch_size != 1:
+    if args.input_type == InputSource.S3 and args.batch_size != 1:
         raise argparse.ArgumentTypeError("Batch size must be 1 when using S3 input.")
 
     if args.input_type == InputSource.S3 and not args.s3_credentials:
