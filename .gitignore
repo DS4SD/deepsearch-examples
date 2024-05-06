@@ -9,7 +9,7 @@ converted_docs
 *converted_docs/
 quick_start_results.*
 examples/kg_download_quick_start/KG-data
-examples/nlp_on_documents/glm/
+examples/*/glm/*
 
 # Created by https://www.gitignore.io/api/linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
 # Edit at https://www.gitignore.io/?templates=linux,macos,python,windows,pycharm+all,visualstudiocode,virtualenv
