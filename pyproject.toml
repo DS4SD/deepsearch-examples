@@ -11,7 +11,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">= 3.8, <3.11"
-deepsearch-toolkit = "^0.42.0"
+deepsearch-toolkit = {git = "ssh://git@github.com/DS4SD/deepsearch-toolkit", rev = "7b604381df0a7338f06891ea463968058a3ccff8"}
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
