@@ -31,7 +31,7 @@ python-dotenv = "^1.0.0"
 nbclient = "^0.9.0"
 pandas = "^1.5.1"
 argilla = "^1.24.0"
-deepsearch-glm = "v0.16.2"
+deepsearch-glm = {version = "v0.16.2", markers = "sys_platform != 'win32'"}
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.1.0"}
