@@ -41,8 +41,9 @@ is based on [Profiles][profiles]. Unless otherwise configured, the profile used 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
 | 1. | [NLP on documents](examples/nlp_on_documents/nlp_on_documents.ipynb) | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
-| 2. | [Reference Parsing](examples/nlp_for_references/nlp_for_references.ipynb) | Examples on how to parse references from Documents |
-| 3. | [Material Extraction](examples/nlp_for_materials/nlp_for_materials.ipynb) | Examples on how to extract materials from Documents |
+| 2. | [MetaData Extraction](examples/nlp_for_metadata/nlp_for_metadata.ipynb) | Examples on how to detect the metadata of a Document |
+| 3. | [Reference Parsing](examples/nlp_for_references/nlp_for_references.ipynb) | Examples on how to parse references from Documents |
+| 4. | [Material Extraction](examples/nlp_for_materials/nlp_for_materials.ipynb) | Examples on how to extract materials from Documents |
 
 ### Data queries
 
