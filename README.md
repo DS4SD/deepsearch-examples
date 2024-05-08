@@ -40,9 +40,9 @@ is based on [Profiles][profiles]. Unless otherwise configured, the profile used 
 
 |    | Name              | Description |
 | -- | ----------------- | ----------- |
-| 1. | [NLP on documents](examples/nlp_on_documents/nlp_on_documents.ipynb) | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
-| 2. | [Reference Parsing](examples/nlp_for_references/nlp_for_references.ipynb) | Examples on how to parse references from Documents |
-| 3. | [Material Extraction](examples/nlp_for_materials/nlp_for_materials.ipynb) | Examples on how to extract materials from Documents |
+| 1. | [NLP on documents](examples/nlp_on_documents/nlp_on_documents.ipynb)* | A few quick examples on how to apply NLP models on documents (eg extracting key-terms) |
+| 2. | [Reference Parsing](examples/nlp_for_references/nlp_for_references.ipynb)* | Examples on how to parse references from Documents |
+| 3. | [Material Extraction](examples/nlp_for_materials/nlp_for_materials.ipynb)* | Examples on how to extract materials from Documents |
 
 ### Data queries
 
@@ -123,6 +123,10 @@ The auxiliary file [apt.txt](./apt.txt) list all such packages for a Debian-base
 ```console
 xargs sudo apt-get install < apt.txt
 ```
+
+### Windows compatibility
+
+Note that some examples require dependencies that are not available on Windows platform. We flagged those examples with an asterisk `*` in the index above.
 
 
 ## License
