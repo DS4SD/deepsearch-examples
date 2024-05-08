@@ -126,7 +126,7 @@ xargs sudo apt-get install < apt.txt
 
 ### Windows compatibility
 
-Note that some examples require dependencies that are not available on Windows platform. We flagged those examples with an asterix `*` in the index above.
+Note that some examples require dependencies that are not available on Windows platform. We flagged those examples with an asterisk `*` in the index above.
 
 
 ## License
