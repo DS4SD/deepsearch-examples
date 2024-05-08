@@ -985,23 +985,23 @@ files = [
 
 [[package]]
 name = "deepsearch-glm"
-version = "0.17.2"
+version = "0.18.4"
 description = "Graph Language Models"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "deepsearch_glm-0.17.2-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:6234fb2fa6755ff1bb7000d21e4574eea68a29557d8f16ba179f5f5713766d9b"},
-    {file = "deepsearch_glm-0.17.2-cp310-cp310-macosx_12_0_x86_64.whl", hash = "sha256:af97145ebb2f21b074ef6385c45d60a2d2553b68254c30aa66b7ddd9206b7f7b"},
-    {file = "deepsearch_glm-0.17.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8fe2669ac7f8567383e0818fe9b3b73979978fb5e65f36db3b7626bf3af6206d"},
-    {file = "deepsearch_glm-0.17.2-cp311-cp311-macosx_12_0_arm64.whl", hash = "sha256:95cbe8e8264c675a128f520f33afa3fd34295c64b00d282c015fe13c7cc2bf3b"},
-    {file = "deepsearch_glm-0.17.2-cp311-cp311-macosx_12_0_x86_64.whl", hash = "sha256:1b9203be399dd4f026769998cca25a5691ff79791ead2dfa05385af8467f4bd8"},
-    {file = "deepsearch_glm-0.17.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6f512fede5fd062ff005f51073ef5660e2e963e0013251176b69bd7ab9e45faa"},
-    {file = "deepsearch_glm-0.17.2-cp38-cp38-macosx_12_0_arm64.whl", hash = "sha256:be15a98b0cbf36e5141e5dd8e22ba29b0e0d92604fc58e53e8fa6c837b29a40f"},
-    {file = "deepsearch_glm-0.17.2-cp38-cp38-macosx_12_0_x86_64.whl", hash = "sha256:e3ddcaf73dd5578786db3333c238790a45d0fa0af4b1df9a41a4b9dd234c2401"},
-    {file = "deepsearch_glm-0.17.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:20e7b819d58df057bd1826fea8cd3e6d0ed4cac3fe819795ee5205360fa77fee"},
-    {file = "deepsearch_glm-0.17.2-cp39-cp39-macosx_12_0_arm64.whl", hash = "sha256:0f8405524b000669b82098b1989e8c4ef4da0f93407477c1d807533d9f427867"},
-    {file = "deepsearch_glm-0.17.2-cp39-cp39-macosx_12_0_x86_64.whl", hash = "sha256:da459f79913b0f967f5802766b2b964bc997d7f5259663901d84c2780961dfa8"},
-    {file = "deepsearch_glm-0.17.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:50757b64a607104882a683b2a570f96f450faaf0f1047125df043d01406f2f16"},
+    {file = "deepsearch_glm-0.18.4-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:ad88c5bf3c203174ef81e0699405aec0f5386130cbc6a975b165f81887bc1a52"},
+    {file = "deepsearch_glm-0.18.4-cp310-cp310-macosx_14_0_x86_64.whl", hash = "sha256:21d51a0671f0713d23be57030287a0f907f4a5f0627a45ea07e2caf54129a71a"},
+    {file = "deepsearch_glm-0.18.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7fc853941ea751a15f65e83f9bee9f988d0ecac4b28fac067b2aab49e15edb74"},
+    {file = "deepsearch_glm-0.18.4-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:cab5e577cf724343f2a5987ff4488c69e86a2dbca8cb0359c9243a07c6cd7d69"},
+    {file = "deepsearch_glm-0.18.4-cp311-cp311-macosx_14_0_x86_64.whl", hash = "sha256:dda02391306d657a884b12f21cc3d1228663f940ec6001c833893dd2844bcc25"},
+    {file = "deepsearch_glm-0.18.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9dccd4286a93ee1a216acba27e1fc76f5d14e280d968998cfeae11a00ad1b6cb"},
+    {file = "deepsearch_glm-0.18.4-cp38-cp38-macosx_14_0_arm64.whl", hash = "sha256:cf38368bc72eab673459ea0fc96c02b1f3ae120df2d9443e1a63e010764ac1e9"},
+    {file = "deepsearch_glm-0.18.4-cp38-cp38-macosx_14_0_x86_64.whl", hash = "sha256:d3fd83ea3b2bce11bac1d710f12547728f4dd48bfaa8bd472366ef144469d52c"},
+    {file = "deepsearch_glm-0.18.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5fb4bfd43ac3b996cdd151c35e94fa399953ee3952d7e86390a825880ece95f3"},
+    {file = "deepsearch_glm-0.18.4-cp39-cp39-macosx_14_0_arm64.whl", hash = "sha256:57cb67e435cacb6c4a6b6a9109d943267c493ebbba252a88ca40909976f60225"},
+    {file = "deepsearch_glm-0.18.4-cp39-cp39-macosx_14_0_x86_64.whl", hash = "sha256:edc399939b6464f96600d2f23796ae2641d668fb794b77199e87abdef77f8853"},
+    {file = "deepsearch_glm-0.18.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:00ad8d932e7f0d1be4fd99fc0d4c8d50cb1ff10764f146b6ecb310a1379123d4"},
 ]
 
 [package.dependencies]
@@ -5279,4 +5279,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">= 3.8, <3.11"
-content-hash = "928e878a81836c1528c27876675534238f9bc5c350965694061acb31ef559c3b"
+content-hash = "73f1b0b84cdeb292efcf668a0a3deeb2ac3f76ebcc3ced6791f681792f17d3b8"
