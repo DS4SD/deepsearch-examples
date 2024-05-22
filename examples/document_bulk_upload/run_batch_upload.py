@@ -220,7 +220,7 @@ async def main():
     save_file = args.resume_point if args.resume_point else args.input_file
     with open(save_file) as f:
         logging.info(f"Reading elements from {save_file}")
-        elements = list(f.readlines())
+        elements = [line.strip() for line in f.readlines()]
 
     s3_cred = None
     if args.input_type == InputSource.S3:
