@@ -12,7 +12,8 @@
 #   --concurrency 5 \
 #   --instance ds-internal \ # profile name in deepsearch-toolkit
 #   --project-key xxx \
-#   --collection-key yyy
+#   --collection-key yyy \
+#   --raw-pages
 #
 # > python run_batch_upload.py \
 #   --input-type URL \
@@ -69,14 +70,17 @@ logging.basicConfig(
 
 
 async def upload_for_key_prefix(
-    api, coords, s3_credentials, key_prefix, semaphore: asyncio.Semaphore
+    api, coords, s3_credentials, key_prefix, raw_pages: bool, semaphore: asyncio.Semaphore
 ):
     async with semaphore:  # This will limit the number of concurrent uploads
         try:
             cos_coordinates_sub = deepcopy(s3_credentials)
             cos_coordinates_sub.key_prefix = cos_coordinates_sub.key_prefix + key_prefix
 
-            payload = {"s3_source": {"coordinates": cos_coordinates_sub.dict()}}
+            payload = {
+                "s3_source": {"coordinates": cos_coordinates_sub.dict()},
+                "target_settings": {"add_raw_pages": raw_pages}
+            }
             task_id = api.data_indices.upload_file(
                 coords=coords,
                 body=payload,
@@ -181,6 +185,13 @@ async def main():
     parser.add_argument("--project-key", "-p", required=True)
     parser.add_argument("--collection-key", "-c", required=True)
     parser.add_argument("--resume-point", "-r", required=False, default=None)
+    parser.add_argument(
+        "--raw-pages",
+        "-w",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        required=False
+    )
 
     # Parse the command-line arguments
     args = parser.parse_args()
@@ -209,7 +220,7 @@ async def main():
     save_file = args.resume_point if args.resume_point else args.input_file
     with open(save_file) as f:
         logging.info(f"Reading elements from {save_file}")
-        elements = list(f.readlines())
+        elements = [line.strip() for line in f.readlines()]
 
     s3_cred = None
     if args.input_type == InputSource.S3:
@@ -235,7 +246,7 @@ async def main():
     if args.input_type == InputSource.S3:
         tasks = [
             loop.create_task(
-                upload_for_key_prefix(api, coords, s3_cred, prefix, semaphore)
+                upload_for_key_prefix(api, coords, s3_cred, prefix, args.raw_pages, semaphore)
             )
             for prefix in pending_items
         ]
