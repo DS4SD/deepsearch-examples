@@ -73,6 +73,7 @@ async def upload_for_key_prefix(
     api, coords, s3_credentials, key_prefix, raw_pages: bool, semaphore: asyncio.Semaphore
 ):
     async with semaphore:  # This will limit the number of concurrent uploads
+        task_id = None
         try:
             cos_coordinates_sub = deepcopy(s3_credentials)
             cos_coordinates_sub.key_prefix = cos_coordinates_sub.key_prefix + key_prefix
@@ -101,12 +102,14 @@ async def upload_for_key_prefix(
             return [key_prefix], None
 
 
-async def upload_for_urls(api, coords, url_batch, semaphore: asyncio.Semaphore):
+async def upload_for_urls(api, coords, url_batch, raw_pages: bool, semaphore: asyncio.Semaphore):
     async with semaphore:  # This will limit the number of concurrent uploads
         task_id = None
         try:
-
-            payload = {"file_url": url_batch}
+            payload = {
+                "file_url": url_batch,
+                "target_settings": {"add_raw_pages": raw_pages}
+            }
             task_id = api.data_indices.upload_file(coords=coords, body=payload)
 
             logging.info(f"Submitting url batch with task_id {task_id}")
@@ -150,7 +153,7 @@ async def wait_for_task(api, coords, task_id):
 
 def save_elements(filename: str, items: list):
     with open(filename, "w") as f:
-        f.writelines(items)
+        f.writelines(line.strip() + "\n" for line in items)
 
 
 def handle_exit_signal(a, b):
@@ -252,7 +255,9 @@ async def main():
         ]
     elif args.input_type == InputSource.URL:
         tasks = [
-            loop.create_task(upload_for_urls(api, coords, url_batch, semaphore))
+            loop.create_task(
+                upload_for_urls(api, coords, url_batch, args.raw_pages, semaphore)
+            )
             for url_batch in chunk_list(pending_items, args.batch_size)
         ]
 
