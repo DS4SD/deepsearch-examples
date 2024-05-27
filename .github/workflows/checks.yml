@@ -1,5 +1,7 @@
 on:
-  workflow_call:
+  push:
+    branches:
+      - "**"
 
 jobs:
   run-checks:
