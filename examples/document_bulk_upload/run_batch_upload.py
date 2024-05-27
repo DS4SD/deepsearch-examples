@@ -61,6 +61,8 @@ JOB_ID = str(uuid.uuid4())
 TASK_POLL_SLEEP_DURATION = 5
 RESUME_FILENAME = f"upload_resume_{JOB_ID}.txt"
 
+print('broken') # testing broken formatting
+
 # Initialize logging
 logging.basicConfig(
     filename=f"upload_report_{JOB_ID}.log",
