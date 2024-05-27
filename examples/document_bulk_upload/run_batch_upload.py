@@ -30,10 +30,10 @@
 
 import argparse
 import asyncio
-import sys
 import logging
 import os.path
 import signal
+import sys
 import uuid
 from copy import deepcopy
 from enum import Enum
@@ -70,7 +70,12 @@ logging.basicConfig(
 
 
 async def upload_for_key_prefix(
-    api, coords, s3_credentials, key_prefix, raw_pages: bool, semaphore: asyncio.Semaphore
+    api,
+    coords,
+    s3_credentials,
+    key_prefix,
+    raw_pages: bool,
+    semaphore: asyncio.Semaphore,
 ):
     async with semaphore:  # This will limit the number of concurrent uploads
         task_id = None
@@ -80,7 +85,7 @@ async def upload_for_key_prefix(
 
             payload = {
                 "s3_source": {"coordinates": cos_coordinates_sub.dict()},
-                "target_settings": {"add_raw_pages": raw_pages}
+                "target_settings": {"add_raw_pages": raw_pages},
             }
             task_id = api.data_indices.upload_file(
                 coords=coords,
@@ -93,7 +98,9 @@ async def upload_for_key_prefix(
 
             request_status = await wait_for_task(api, coords, task_id)
 
-            logging.info(f"Report for {key_prefix} with task_id {task_id}: {request_status}")
+            logging.info(
+                f"Report for {key_prefix} with task_id {task_id}: {request_status}"
+            )
             return [key_prefix], request_status
         except Exception as e:
             logging.error(
@@ -102,13 +109,15 @@ async def upload_for_key_prefix(
             return [key_prefix], None
 
 
-async def upload_for_urls(api, coords, url_batch, raw_pages: bool, semaphore: asyncio.Semaphore):
+async def upload_for_urls(
+    api, coords, url_batch, raw_pages: bool, semaphore: asyncio.Semaphore
+):
     async with semaphore:  # This will limit the number of concurrent uploads
         task_id = None
         try:
             payload = {
                 "file_url": url_batch,
-                "target_settings": {"add_raw_pages": raw_pages}
+                "target_settings": {"add_raw_pages": raw_pages},
             }
             task_id = api.data_indices.upload_file(coords=coords, body=payload)
 
@@ -193,7 +202,7 @@ async def main():
         "-w",
         action=argparse.BooleanOptionalAction,
         default=False,
-        required=False
+        required=False,
     )
 
     # Parse the command-line arguments
@@ -219,7 +228,7 @@ async def main():
         raise argparse.ArgumentTypeError(
             "you must provide s3-credentials with input-type S3."
         )
-    
+
     save_file = args.resume_point if args.resume_point else args.input_file
     with open(save_file) as f:
         logging.info(f"Reading elements from {save_file}")
@@ -233,7 +242,9 @@ async def main():
 
     pending_items = elements
     save_elements(RESUME_FILENAME, pending_items)
-    logging.info(f"To resume this job later, provide --resume-point {RESUME_FILENAME} to the command line.")
+    logging.info(
+        f"To resume this job later, provide --resume-point {RESUME_FILENAME} to the command line."
+    )
 
     semaphore = asyncio.Semaphore(args.concurrency)
     signal.signal(signal.SIGTERM, handle_exit_signal)
@@ -249,7 +260,9 @@ async def main():
     if args.input_type == InputSource.S3:
         tasks = [
             loop.create_task(
-                upload_for_key_prefix(api, coords, s3_cred, prefix, args.raw_pages, semaphore)
+                upload_for_key_prefix(
+                    api, coords, s3_cred, prefix, args.raw_pages, semaphore
+                )
             )
             for prefix in pending_items
         ]
