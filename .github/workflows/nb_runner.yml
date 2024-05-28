@@ -35,4 +35,5 @@ jobs:
           DS_NB_SEM_ON_IDX_DOC_HASH: ${{ vars.DS_NB_SEM_ON_IDX_DOC_HASH }}
           DS_NB_SEM_OFF_IDX_KEY: ${{ vars.DS_NB_SEM_OFF_IDX_KEY }}
           DS_NB_SEM_OFF_IDX_DOC_HASH: ${{ vars.DS_NB_SEM_OFF_IDX_DOC_HASH }}
+          DS_NB_INDEX_KEY: ${{ vars.DS_NB_INDEX_KEY }}
         run: poetry run python -m nbrunner.nb_runner
