@@ -33,6 +33,11 @@ class KGProjectNotebookSettings(ProjectNotebookSettings):
         return v or input("Knowledge graph key: ")
 
 
+class CollOptionalNotebookSettings(NotebookSettings):
+    proj_key: Optional[str] = None
+    index_key: Optional[str] = None
+
+
 class CollQANotebookSettings(ProjectNotebookSettings):
     sem_on_idx_key: str
     retr_k: int = 5
