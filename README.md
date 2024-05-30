@@ -144,8 +144,8 @@ For individual model usage, please refer to the model licenses found in the orig
 [data_extract_figures]: ./examples/data_extract_figures/
 [data_query_chemistry]: ./examples/data_query_chemistry/
 [data_query_chemistry_patcid]: ./examples/data_query_chemistry_patcid/
-[qa_quick_start]: ./examples/qa_rag_semantic_retrieval/qa_quick_start.ipynb
-[qa_deep_dive]: ./examples/qa_rag_semantic_retrieval/qa_deep_dive.ipynb
+[qa_quick_start]: ./examples/qa/qa_quick_start.ipynb
+[qa_deep_dive]: ./examples/qa/qa_deep_dive.ipynb
 [qa_doc_collection]: ./examples/qa_doc_collection
 [bring_your_own_pdf]: ./examples/bring_your_own_pdf/
 [bring_your_own_converted_documents]: ./bring_your_own_converted_documents/
