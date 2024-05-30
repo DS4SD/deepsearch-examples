@@ -3,6 +3,7 @@
 Deep Search allows users to interact with the documents using conversational AI, i.e. the user interacts with a virtual assistant which answers their questions using the information from a document collection or a specific document.
 
 :point_right: For getting started, check out [QA Quick Start](./qa_quick_start.ipynb).
+
 :point_right: For advanced usage, check out [QA Deep Dive](./qa_deep_dive.ipynb).
 
 
