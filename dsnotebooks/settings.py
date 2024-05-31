@@ -1,7 +1,6 @@
 from datetime import datetime
 from typing import Optional
 
-from deepsearch.cps.queries import ConstrainedWeight
 from dotenv import find_dotenv
 from pydantic.v1 import BaseSettings, validator
 
@@ -36,18 +35,3 @@ class KGProjectNotebookSettings(ProjectNotebookSettings):
 class CollOptionalNotebookSettings(NotebookSettings):
     proj_key: Optional[str] = None
     index_key: Optional[str] = None
-
-
-class CollQANotebookSettings(ProjectNotebookSettings):
-    sem_on_idx_key: str
-    retr_k: int = 5
-    text_weight: ConstrainedWeight = 0.1
-    rerank: bool = False
-    skip_ingested_docs: bool = True
-    raise_on_sem_err: bool = True
-
-
-class DocQANotebookSettings(CollQANotebookSettings):
-    sem_on_idx_doc_hash: str
-    sem_off_idx_key: str
-    sem_off_idx_doc_hash: str
