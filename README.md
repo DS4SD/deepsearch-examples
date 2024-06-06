@@ -17,7 +17,6 @@ for **Document conversion** as well as **Data and Knowledge exploration**.
 - [Deep Search Toolkit](https://github.com/ds4sd/deepsearch-toolkit)
 - [Documentation](https://ds4sd.github.io/deepsearch-toolkit/)
 
-
 ## Examples
 
 ### Setup and usage
