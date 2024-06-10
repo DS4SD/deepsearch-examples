@@ -1,5 +1,6 @@
 import glob
 import os
+import traceback
 import uuid
 from pathlib import Path
 from typing import Optional, Set
@@ -56,9 +57,9 @@ class NotebookRunner:
         )
         try:
             out = ep.preprocess(nb, {"metadata": {"path": notebook_path.parent}})
-        except (CellExecutionError, CellTimeoutError) as e:
+        except (CellExecutionError, CellTimeoutError):
             print(f"=> Error during {run_id}; check {output_filename} for details")
-            print(e.traceback)
+            print(traceback.print_exc())
             out = None
         finally:
             with open(output_filename, mode="w", encoding="utf-8") as f:
