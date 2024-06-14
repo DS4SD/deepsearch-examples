@@ -34,5 +34,6 @@ jobs:
           DS_NB_QA_DOC_HASH: ${{ vars.DS_NB_QA_DOC_HASH }}
           DS_NB_QUESTION: ${{ vars.DS_NB_QUESTION }}
           DS_NB_GEN_TIMEOUT: ${{ vars.DS_NB_GEN_TIMEOUT }}
+          DS_NB_GEN_CTX_WIN_SIZE: ${{ vars.DS_NB_GEN_CTX_WIN_SIZE }}
           DS_NB_INDEX_KEY: ${{ vars.DS_NB_INDEX_KEY }}
         run: poetry run python -m nbrunner.nb_runner
