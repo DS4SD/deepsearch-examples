@@ -3,7 +3,7 @@ name: "Run notebooks"
 on:
   workflow_dispatch:  # no body
   schedule:
-    - cron: "0 17 * * *"  # UTC-based
+    - cron: "1 17 * * *"  # UTC-based
 
 jobs:
   run-notebooks:
