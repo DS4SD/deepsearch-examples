@@ -10,8 +10,8 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">= 3.8, <3.11"
-deepsearch-toolkit = "0.48.0"
+python = ">= 3.9, <3.11"
+deepsearch-toolkit = {git = "https://github.com/SantanaTiago/deepsearch-toolkit.git", branch = "snt/update-document-conversion"}
 jupyter = "^1.0.0"
 ipywidgets = "^7"  # previous major release is needed bcause of mols2grid
 numpy = "^1.23.4"
@@ -29,8 +29,8 @@ spacy = "^3.5.2"
 pydantic = "^2.0.3"
 python-dotenv = "^1.0.0"
 nbclient = "^0.9.0"
-pandas = "^1.5.1"
-argilla = "^1.24.0"
+pandas = "^2.0.0"
+argilla = "^2.6.0"
 deepsearch-glm = {version = "v0.16.2", markers = "sys_platform != 'win32'"}
 
 [tool.poetry.group.dev.dependencies]
